@@ -1,11 +1,10 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 
-	import { tableA11y } from '$lib/utilities/DataTable/DataTable';
+	import { tableA11y } from '@skeletonlabs/skeleton';
 
 	// Types
-	import type { CssClasses } from '$lib';
-	import type { TableSource } from '$lib/components/Table/types';
+	import type { CssClasses, TableSource } from '@skeletonlabs/skeleton';
 
 	const dispatch = createEventDispatcher();
 

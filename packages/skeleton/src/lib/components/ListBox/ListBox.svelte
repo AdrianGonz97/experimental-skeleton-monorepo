@@ -2,11 +2,11 @@
 	import { setContext } from 'svelte';
 
 	// Types
-	import type { CssClasses } from '$lib';
+	import type { CssClasses } from '@skeletonlabs/skeleton';
 
 	// Props
 	/** Enable selection of multiple items. */
-	export let multiple: boolean = false;
+	export let multiple = false;
 
 	// Props (styles)
 	/** Provide class to set the vertical spacing style. */
@@ -24,7 +24,7 @@
 
 	// Props (a11y)
 	/** Provide the ARIA labelledby value. */
-	export let labelledby: string = '';
+	export let labelledby = '';
 
 	// Context
 	setContext('multiple', multiple);
@@ -34,7 +34,7 @@
 	setContext('padding', padding);
 
 	// Classes
-	const cBase: string = '';
+	const cBase = '';
 
 	// Reactive
 	$: classesBase = `${cBase} ${spacing} ${rounded} ${$$props.class ?? ''}`;

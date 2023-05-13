@@ -4,7 +4,7 @@
 	import { flip } from 'svelte/animate';
 
 	// Types
-	import type { CssClasses } from '$lib';
+	import type { CssClasses } from '@skeletonlabs/skeleton';
 
 	// Event Dispatcher
 	const dispatch = createEventDispatcher();

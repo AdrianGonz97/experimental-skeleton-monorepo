@@ -6,7 +6,7 @@
 	 */
 
 	// Types
-	import type { CssClasses } from '$lib';
+	import type { CssClasses } from '@skeletonlabs/skeleton';
 
 	// Props (base)
 	/** Provide classes to set background color. */

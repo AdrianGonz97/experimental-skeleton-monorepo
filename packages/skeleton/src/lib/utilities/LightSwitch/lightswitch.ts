@@ -1,7 +1,7 @@
 // Lightswitch Service
 
 import { get } from 'svelte/store';
-import { localStorageStore } from '$lib/utilities/LocalStorageStore/LocalStorageStore';
+import { localStorageStore } from '@skeletonlabs/skeleton';
 
 // Stores ---
 // TRUE: light, FALSE: dark
@@ -56,9 +56,9 @@ export function setModeCurrent(value: boolean) {
 export function setInitialClassState() {
 	const elemHtmlClasses = document.documentElement.classList;
 	// Conditions
-	const condLocalStorageUserPrefs: boolean = localStorage.getItem('modeUserPrefers') === 'false';
-	const condLocalStorageUserPrefsExists: boolean = !('modeUserPrefers' in localStorage);
-	const condMatchMedia: boolean = window.matchMedia('(prefers-color-scheme: dark)').matches;
+	const condLocalStorageUserPrefs = localStorage.getItem('modeUserPrefers') === 'false';
+	const condLocalStorageUserPrefsExists = !('modeUserPrefers' in localStorage);
+	const condMatchMedia = window.matchMedia('(prefers-color-scheme: dark)').matches;
 	// Add/remove `.dark` class to HTML element
 	if (condLocalStorageUserPrefs || (condLocalStorageUserPrefsExists && condMatchMedia)) {
 		elemHtmlClasses.add('dark');

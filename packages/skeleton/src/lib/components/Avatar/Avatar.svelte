@@ -1,6 +1,6 @@
 <script lang="ts">
 	// Types
-	import type { CssClasses } from '$lib';
+	import type { CssClasses } from '@skeletonlabs/skeleton';
 
 	// Props (initials)
 	/** Initials only - Provide up to two text characters. */
@@ -10,9 +10,9 @@
 
 	// Props (actions)
 	/** Provide the avatar image element source. */
-	export let src: string = '';
+	export let src = '';
 	/** Provide the fallback image element source. */
-	export let fallback: string = '';
+	export let fallback = '';
 	/**
 	 * Image only. Provide an Svelte action reference, such as `filter`.
 	 * @type {function}

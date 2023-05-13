@@ -6,7 +6,7 @@
 	 */
 
 	// Types
-	import type { CssClasses } from '$lib';
+	import type { CssClasses } from '@skeletonlabs/skeleton';
 
 	import { setContext } from 'svelte';
 	import { writable, type Readable, type Writable } from 'svelte/store';

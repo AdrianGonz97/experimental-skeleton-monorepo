@@ -3,7 +3,7 @@
 	import type { Readable, Writable } from 'svelte/store';
 
 	// Types
-	import type { CssClasses } from '$lib';
+	import type { CssClasses } from '@skeletonlabs/skeleton';
 
 	// Event Handler
 	const dispatch = createEventDispatcher<{ click: MouseEvent }>();

@@ -35,7 +35,7 @@ export {
 	// Svelte Actions
 	tableInteraction,
 	tableA11y
-} from '$lib/utilities/DataTable/DataTable';
+} from './utilities/DataTable/DataTable';
 // Lightswitch
 export {
 	// Stores

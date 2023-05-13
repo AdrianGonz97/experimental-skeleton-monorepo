@@ -7,14 +7,14 @@
 	const dispatch = createEventDispatcher();
 
 	// Types
-	import type { CssClasses } from '$lib';
+	import type { CssClasses } from '@skeletonlabs/skeleton';
 
 	// Actions
-	import { focusTrap } from '$lib/actions/FocusTrap/focusTrap';
+	import { focusTrap } from '@skeletonlabs/skeleton';
 
 	// Drawer Utils
-	import type { DrawerSettings } from '$lib/utilities/Drawer/types';
-	import { drawerStore } from '$lib/utilities/Drawer/stores';
+	import type { DrawerSettings } from './types';
+	import { drawerStore } from './stores';
 
 	// Props
 	/** Set the anchor position.

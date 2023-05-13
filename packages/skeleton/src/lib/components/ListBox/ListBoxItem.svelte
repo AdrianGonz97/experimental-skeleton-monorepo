@@ -8,7 +8,7 @@
 	import { getContext } from 'svelte';
 
 	// Types
-	import type { CssClasses } from '$lib';
+	import type { CssClasses } from '@skeletonlabs/skeleton';
 
 	// Props
 	/** Set the radio group binding value. */
@@ -26,8 +26,8 @@
 	export let padding: CssClasses = getContext('padding');
 
 	// Classes
-	const cBase: string = 'cursor-pointer -outline-offset-[3px]';
-	const cLabel: string = 'flex items-center space-x-4';
+	const cBase = 'cursor-pointer -outline-offset-[3px]';
+	const cLabel = 'flex items-center space-x-4';
 
 	// Local
 	let checked: boolean;

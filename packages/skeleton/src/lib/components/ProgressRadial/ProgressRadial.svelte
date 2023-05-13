@@ -3,7 +3,7 @@
 	import { afterUpdate } from 'svelte';
 
 	// Types
-	import type { CssClasses } from '$lib';
+	import type { CssClasses } from '@skeletonlabs/skeleton';
 
 	// Props
 	/**

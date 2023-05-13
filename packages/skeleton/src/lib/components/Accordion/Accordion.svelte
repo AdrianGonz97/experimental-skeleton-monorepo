@@ -6,7 +6,7 @@
 	import { setContext } from 'svelte';
 
 	// Types
-	import type { CssClasses } from '$lib';
+	import type { CssClasses } from '@skeletonlabs/skeleton';
 
 	// Props
 	/** Set the auto-collapse mode. */

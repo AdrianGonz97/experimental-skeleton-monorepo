@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 	// Types
-	import type { CssClasses } from '$lib';
-	import type { PaginationSettings } from '$lib/components/Paginator/types';
+	import type { CssClasses, PaginationSettings } from '@skeletonlabs/skeleton';
 
 	const dispatch = createEventDispatcher();
 
@@ -13,7 +12,7 @@
 	 */
 	export let settings: PaginationSettings = { offset: 0, limit: 5, size: 0, amounts: [1, 2, 5, 10] };
 	/** Sets selection and buttons to disabled state on-demand. */
-	export let disabled: boolean = false;
+	export let disabled = false;
 
 	// Props (styles)
 	/** Provide classes to style the select input. */

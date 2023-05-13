@@ -5,10 +5,10 @@
 	const dispatch = createEventDispatcher();
 
 	// Types
-	import type { CssClasses } from '$lib';
+	import type { CssClasses } from '@skeletonlabs/skeleton';
 
 	import { storeHighlightJs } from './stores';
-	import { clipboard } from '$lib/actions/Clipboard/clipboard';
+	import { clipboard } from '@skeletonlabs/skeleton';
 
 	// Props
 	/** Sets a language alias for Highlight.js syntax highlighting. */
@@ -17,7 +17,7 @@
 	export let code = '';
 
 	/** Specify if line numbers should be added to the code block*/
-	export let lineNumbers: boolean = false;
+	export let lineNumbers = false;
 
 	// Props (styles)
 	/** Provide classes to set the background color. */

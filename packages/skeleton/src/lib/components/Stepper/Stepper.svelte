@@ -4,7 +4,7 @@
 	import { fade } from 'svelte/transition';
 
 	// Types
-	import type { CssClasses } from '$lib';
+	import type { CssClasses } from '@skeletonlabs/skeleton';
 
 	// Event Dispatcher
 	const dispatchParent = createEventDispatcher();
