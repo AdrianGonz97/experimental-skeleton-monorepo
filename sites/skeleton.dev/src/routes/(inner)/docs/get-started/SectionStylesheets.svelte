@@ -2,10 +2,7 @@
 	import { writable, type Writable } from 'svelte/store';
 
 	// Components
-	import TabGroup from '$lib/components/Tab/TabGroup.svelte';
-	import Tab from '$lib/components/Tab/Tab.svelte';
-	// Utilities
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { TabGroup, Tab, CodeBlock } from '@skeletonlabs/skeleton';
 
 	// Stores
 	import { storeOnboardMethod } from '$docs/stores/stores';

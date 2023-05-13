@@ -1,8 +1,7 @@
 <script lang="ts">
-	import LayoutPage from '$docs/layouts/LayoutPage/LayoutPage.svelte';
 	import DocsThemer from '$docs/layouts/DocsThemer/DocsThemer.svelte';
 	// Components
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { CodeBlock } from '@skeletonlabs/skeleton';
 </script>
 
 <div class="page-container">

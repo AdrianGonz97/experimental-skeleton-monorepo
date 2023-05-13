@@ -2,8 +2,7 @@
 	import DocsShell from '$docs/layouts/DocsShell/DocsShell.svelte';
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 
-	import Table from '$lib/components/Table/Table.svelte';
-	import type { TableSource } from '$lib/components/Table/types';
+	import { Table, type TableSource } from '@skeletonlabs/skeleton';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {

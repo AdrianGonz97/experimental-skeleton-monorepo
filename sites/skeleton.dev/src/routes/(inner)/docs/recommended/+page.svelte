@@ -1,6 +1,6 @@
 <script>
 	import LayoutPage from '$docs/layouts/LayoutPage/LayoutPage.svelte';
-	import Avatar from '$lib/components/Avatar/Avatar.svelte';
+	import { Avatar } from '@skeletonlabs/skeleton';
 </script>
 
 <LayoutPage>

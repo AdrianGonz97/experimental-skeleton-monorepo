@@ -3,10 +3,7 @@
 	// Docs
 	import LayoutPage from '$docs/layouts/LayoutPage/LayoutPage.svelte';
 	// Components
-	import Tab from '$lib/components/Tab/Tab.svelte';
-	import TabGroup from '$lib/components/Tab/TabGroup.svelte';
-	// Utilities
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { Tab, TabGroup, CodeBlock } from '@skeletonlabs/skeleton';
 
 	// Local
 	let activeTheme = themes[1];

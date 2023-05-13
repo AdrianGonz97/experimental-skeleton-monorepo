@@ -1,10 +1,7 @@
 <script lang="ts">
 	import LayoutPage from '$docs/layouts/LayoutPage/LayoutPage.svelte';
-	// Types
-	import type { TableSource } from '$lib/components/Table/types';
 	// Components
-	import Table from '$lib/components/Table/Table.svelte';
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { Table, CodeBlock, type TableSource } from '@skeletonlabs/skeleton';
 
 	// Tables
 	const tableBranches: TableSource = {

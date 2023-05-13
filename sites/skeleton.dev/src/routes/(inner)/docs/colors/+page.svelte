@@ -1,10 +1,7 @@
 <script lang="ts">
 	import LayoutPage from '$docs/layouts/LayoutPage/LayoutPage.svelte';
-	// Types
-	import type { TableSource } from '$lib/components/Table/types';
 	// Components
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
-	import Table from '$lib/components/Table/Table.svelte';
+	import { CodeBlock, Table, type TableSource } from '@skeletonlabs/skeleton';
 
 	const cSwatch = 'w-4 aspect-square rounded-full';
 	const tableProps: TableSource = {

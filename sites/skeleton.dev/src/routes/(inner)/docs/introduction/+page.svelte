@@ -1,9 +1,7 @@
 <script lang="ts">
 	import LayoutPage from '$docs/layouts/LayoutPage/LayoutPage.svelte';
 	// Components
-	import Accordion from '$lib/components/Accordion/Accordion.svelte';
-	import AccordionItem from '$lib/components/Accordion/AccordionItem.svelte';
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { Accordion, AccordionItem, CodeBlock } from '@skeletonlabs/skeleton';
 </script>
 
 <LayoutPage>

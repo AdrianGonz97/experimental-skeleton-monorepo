@@ -3,7 +3,7 @@
 	// Docs
 	import LayoutPage from '$docs/layouts/LayoutPage/LayoutPage.svelte';
 	// Utilities
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { CodeBlock } from '@skeletonlabs/skeleton';
 	// Stores
 	export const storeStylesheets: Writable<string> = writable('recommended');
 	export const storeStylesheetElements: Writable<string> = writable('combined');

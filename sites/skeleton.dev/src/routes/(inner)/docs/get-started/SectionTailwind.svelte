@@ -1,9 +1,7 @@
 <script lang="ts">
 	import { storeOnboardMethod } from '$docs/stores/stores';
 	// Components
-	import Tab from '$lib/components/Tab/Tab.svelte';
-	import TabGroup from '$lib/components/Tab/TabGroup.svelte';
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { Tab, TabGroup, CodeBlock } from '@skeletonlabs/skeleton';
 </script>
 
 <!-- Header -->

@@ -2,9 +2,7 @@
 	import { storeOnboardMethod } from '$docs/stores/stores';
 	import { themes } from '$docs/themes';
 	// Components
-	import TabGroup from '$lib/components/Tab/TabGroup.svelte';
-	import Tab from '$lib/components/Tab/Tab.svelte';
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { TabGroup, Tab, CodeBlock } from '@skeletonlabs/skeleton';
 
 	// Local
 	let activeTheme = themes[1];

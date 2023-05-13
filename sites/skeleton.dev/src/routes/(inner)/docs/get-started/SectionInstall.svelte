@@ -1,9 +1,7 @@
 <script lang="ts">
 	import { storeOnboardMethod } from '$docs/stores/stores';
 	// Components
-	import TabGroup from '$lib/components/Tab/TabGroup.svelte';
-	import Tab from '$lib/components/Tab/Tab.svelte';
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { TabGroup, Tab, CodeBlock } from '@skeletonlabs/skeleton';
 </script>
 
 <section class="space-y-4">
