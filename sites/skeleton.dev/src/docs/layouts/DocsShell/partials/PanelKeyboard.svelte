@@ -2,7 +2,7 @@
 	// Types
 	import type { DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	// Components
-	import Table from '$lib/components/Table/Table.svelte';
+	import { Table } from '@skeletonlabs/skeleton';
 
 	// Props
 	export let pageData: DocsShellSettings;

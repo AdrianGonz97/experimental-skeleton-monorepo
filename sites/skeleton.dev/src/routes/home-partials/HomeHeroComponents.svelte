@@ -1,13 +1,8 @@
 <script lang="ts">
-	import Avatar from '$lib/components/Avatar/Avatar.svelte';
-	import ProgressRadial from '$lib/components/ProgressRadial/ProgressRadial.svelte';
-	import RadioGroup from '$lib/components/Radio/RadioGroup.svelte';
-	import RadioItem from '$lib/components/Radio/RadioItem.svelte';
-	import SlideToggle from '$lib/components/SlideToggle/SlideToggle.svelte';
-	import LightSwitch from '$lib/utilities/LightSwitch/LightSwitch.svelte';
+	import { Avatar, ProgressRadial, RadioGroup, RadioItem, SlideToggle, LightSwitch } from '@skeletonlabs/skeleton';
 
 	// Local
-	let value: number = 0;
+	let value = 0;
 	let demoSlideToggle = true;
 </script>
 

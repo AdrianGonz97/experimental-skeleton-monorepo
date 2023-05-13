@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { menuNavLinks } from '$docs/links';
-	import { modalStore } from '$lib/utilities/Modal/stores';
+	import { modalStore } from '@skeletonlabs/skeleton';
 
 	// Classes
 	const cBase =
@@ -13,8 +13,8 @@
 
 	// Local
 	let searchTerm = '';
-	let navigationOriginal: any[] = Object.values(menuNavLinks);
-	let navigation: any[] = navigationOriginal;
+	let navigationOriginal = Object.values(menuNavLinks);
+	let navigation = navigationOriginal;
 
 	// Elements
 	let elemDocSearch: HTMLElement;

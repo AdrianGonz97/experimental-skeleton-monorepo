@@ -1,6 +1,7 @@
 // Navigation Links & Sitemap
 
-export const menuNavLinks: any = [
+type NavLink = { id: string; title: string; list: { href: string; label: string; keywords: string; badge?: string }[] };
+export const menuNavLinks: NavLink[] = [
 	// Docs ---
 
 	{

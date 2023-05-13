@@ -1,6 +1,6 @@
 <script lang="ts">
 	import DocsLogoLabs from '$docs/components/DocsLogos/DocsLogoLabs.svelte';
-	import Avatar from '$lib/components/Avatar/Avatar.svelte';
+	import { Avatar } from '@skeletonlabs/skeleton';
 	export let contributors: any[];
 </script>
 

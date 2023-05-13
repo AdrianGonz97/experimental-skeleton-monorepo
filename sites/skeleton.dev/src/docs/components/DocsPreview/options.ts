@@ -30,7 +30,7 @@ export const backgrounds: Record<string, string> = {
 	'success-to-error': 'bg-gradient-to-br variant-gradient-success-error'
 };
 
-export const variants: any[] = [
+export const variants: { label: string; list: string[] }[] = [
 	{
 		label: 'Utility Classes',
 		list: ['bg-initial', '!bg-transparent']

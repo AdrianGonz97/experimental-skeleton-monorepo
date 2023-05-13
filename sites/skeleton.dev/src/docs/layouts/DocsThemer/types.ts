@@ -1,4 +1,4 @@
-import type { SemanticNames } from '$lib/types';
+import type { SemanticNames } from '@skeletonlabs/skeleton/types';
 
 export interface ColorSettings {
 	key: SemanticNames;

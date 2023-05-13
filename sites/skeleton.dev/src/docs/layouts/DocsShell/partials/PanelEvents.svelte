@@ -4,7 +4,7 @@
 	// Sveld Mapper
 	import { sveldMapperEvents } from '$docs/layouts/DocsShell/sveldMapper';
 	// Components
-	import Table from '$lib/components/Table/Table.svelte';
+	import { Table } from '@skeletonlabs/skeleton';
 
 	// Props
 	export let pageData: DocsShellSettings;

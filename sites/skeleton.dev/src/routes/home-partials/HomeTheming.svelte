@@ -1,7 +1,5 @@
 <script lang="ts">
-	import TabGroup from '$lib/components/Tab/TabGroup.svelte';
-	import Tab from '$lib/components/Tab/Tab.svelte';
-	import ProgressBar from '$lib/components/ProgressBar/ProgressBar.svelte';
+	import { TabGroup, Tab, ProgressBar } from '@skeletonlabs/skeleton';
 
 	// Local
 	let theme = 'simple';

@@ -2,26 +2,22 @@
 	import type { Writable } from 'svelte/store';
 
 	// Preview Components
-	import ProgressBar from '$lib/components/ProgressBar/ProgressBar.svelte';
-	import SlideToggle from '$lib/components/SlideToggle/SlideToggle.svelte';
+	import { ProgressBar, SlideToggle } from '@skeletonlabs/skeleton';
 	// Components
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
-	import LightSwitch from '$lib/utilities/LightSwitch/LightSwitch.svelte';
+	import { CodeBlock, LightSwitch } from '@skeletonlabs/skeleton';
 	import Swatch from './Swatch.svelte';
 
 	// Utilities
-	import { localStorageStore } from '$lib/utilities/LocalStorageStore/LocalStorageStore';
-	import { popup } from '$lib/utilities/Popup/popup';
+	import { localStorageStore, popup } from '@skeletonlabs/skeleton';
 
 	// Local Utils
 	import { storePreview } from './stores';
 	import type { ColorSettings, FormTheme, ContrastReport } from './types';
 	import { inputSettings, fontSettings } from './settings';
 	import { type Palette, generatePalette, generateA11yOnColor, hexValueIsValid, getPassReport } from './colors';
-	import type { PopupSettings } from '$lib/utilities/Popup/types';
+	import type { PopupSettings } from '@skeletonlabs/skeleton';
 
 	// Stores
-	/* @ts-ignore */
 	const storeThemGenForm: Writable<FormTheme> = localStorageStore('storeThemGenForm', {
 		colors: [
 			{ key: 'primary', label: 'Primary', hex: '#0FBA81', rgb: '0 0 0', on: '0 0 0' },
@@ -42,8 +38,8 @@
 	});
 
 	// Local
-	let cssOutput: string = '';
-	let showThemeCSS: boolean = false;
+	let cssOutput = '';
+	let showThemeCSS = false;
 	let conReports: ContrastReport[] = getContrastReports();
 
 	function randomize(): void {

@@ -7,7 +7,8 @@
 	// Utilities
 	import { CodeBlock } from '@skeletonlabs/skeleton';
 	// Sveld
-	import { Accordion as sveldAccordion, AccordionItem as sveldAccordionItem } from '@skeletonlabs/skeleton?raw&sveld';
+	import sveldAccordion from '@skeletonlabs/skeleton/components/Accordian.svelte?raw&sveld';
+	import sveldAccordionItem from '@skeletonlabs/skeleton/components/AccordianItem.svelte?raw&sveld';
 
 	// import sveldAccordion from '$lib/components/Accordion/Accordion.svelte?raw&sveld';
 	// import sveldAccordionItem from '$lib/components/Accordion/AccordionItem.svelte?raw&sveld';

@@ -1,13 +1,12 @@
 <script lang="ts">
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	// Components
-	import ListBox from '$lib/components/ListBox/ListBox.svelte';
-	import ListBoxItem from '$lib/components/ListBox/ListBoxItem.svelte';
+	import { ListBox, ListBoxItem } from '@skeletonlabs/skeleton';
 	// Utilities
-	import LightSwitch from '$lib/utilities/LightSwitch/LightSwitch.svelte';
+	import { LightSwitch } from '@skeletonlabs/skeleton';
 
 	// Local
-	let showcase: string = 'elements';
+	let showcase = 'elements';
 </script>
 
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-10 items-start">

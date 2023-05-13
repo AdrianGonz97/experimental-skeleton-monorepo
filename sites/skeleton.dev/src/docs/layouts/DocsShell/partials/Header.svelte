@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { DocsShellSettings } from '$docs/layouts/DocsShell/types';
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { CodeBlock } from '@skeletonlabs/skeleton';
 
 	// Props
 	export let pageData: DocsShellSettings;

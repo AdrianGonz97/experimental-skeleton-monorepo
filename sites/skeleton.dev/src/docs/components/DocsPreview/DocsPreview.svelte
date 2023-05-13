@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
 	// Components
-	import RadioGroup from '$lib/components/Radio/RadioGroup.svelte';
-	import RadioItem from '$lib/components/Radio/RadioItem.svelte';
+	import { RadioGroup, RadioItem } from '@skeletonlabs/skeleton';
 	// Settings
 	import { backgrounds } from './options';
 
@@ -37,8 +36,8 @@
 	const cSource = 'bg-surface-100-800-token p-4 space-y-4';
 
 	// Local
-	let tabView: string = 'preview';
-	let radioSize: string = 'full';
+	let tabView = 'preview';
+	let radioSize = 'full';
 	let swatches = false;
 
 	function toggleSwatches(): void {

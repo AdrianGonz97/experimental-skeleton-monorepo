@@ -4,19 +4,18 @@
 
 	import DocsIcon from '$docs/components/DocsIcon/DocsIcon.svelte';
 	import { menuNavLinks } from '../../links';
-	import AppRail from '$lib/components/AppRail/AppRail.svelte';
-	import AppRailTile from '$lib/components/AppRail/AppRailTile.svelte';
+	import { AppRail, AppRailTile } from '@skeletonlabs/skeleton';
 
 	// Stores
 	import { storeCurrentUrl } from '$docs/stores/stores';
-	import { drawerStore } from '$lib/utilities/Drawer/stores';
+	import { drawerStore } from '@skeletonlabs/skeleton';
 
 	// Props
 	export let embedded = false;
 
 	// Local
 	const storeCategory: Writable<string> = writable('guides'); // guides | docs | tailwind | svelte | utilities
-	let filteredMenuNavLinks: any[] = menuNavLinks;
+	let filteredMenuNavLinks = menuNavLinks;
 
 	// ListItem Click Handler
 	function onListItemClick(): void {
@@ -31,16 +30,16 @@
 		// prettier-ignore
 		switch($storeCategory) {
 			case('docs'):
-				filteredMenuNavLinks = menuNavLinks.filter((linkSet: any) => ['docs', 'essentials', 'resources'].includes(linkSet.id));
+				filteredMenuNavLinks = menuNavLinks.filter((linkSet) => ['docs', 'essentials', 'resources'].includes(linkSet.id));
 				break;
 			case('elements'):
-				filteredMenuNavLinks = menuNavLinks.filter((linkSet: any) => ['tokens', 'base', 'elements', 'blocks'].includes(linkSet.id));
+				filteredMenuNavLinks = menuNavLinks.filter((linkSet) => ['tokens', 'base', 'elements', 'blocks'].includes(linkSet.id));
 				break;
 			case('svelte'):
-				filteredMenuNavLinks = menuNavLinks.filter((linkSet: any) => ['components', 'actions'].includes(linkSet.id));
+				filteredMenuNavLinks = menuNavLinks.filter((linkSet) => ['components', 'actions'].includes(linkSet.id));
 				break;
 			case('utilities'):
-				filteredMenuNavLinks = menuNavLinks.filter((linkSet: any) => linkSet.id === 'utilities');
+				filteredMenuNavLinks = menuNavLinks.filter((linkSet) => linkSet.id === 'utilities');
 				break;
 		}
 	}

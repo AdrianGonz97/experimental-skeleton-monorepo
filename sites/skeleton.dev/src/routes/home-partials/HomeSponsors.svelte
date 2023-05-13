@@ -1,8 +1,5 @@
 <script lang="ts">
-	import Avatar from '$lib/components/Avatar/Avatar.svelte';
-	// Utilities
-	import { popup } from '$lib/utilities/Popup/popup';
-	import type { PopupSettings } from '$lib/utilities/Popup/types';
+	import { Avatar, popup, type PopupSettings } from '@skeletonlabs/skeleton';
 
 	let popupBrainBones: PopupSettings = { event: 'hover', target: 'popupBrainBones', placement: 'top' };
 	let popupLukeHagar: PopupSettings = { event: 'hover', target: 'popupLukeHagar', placement: 'top' };

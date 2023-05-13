@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { storeVercelProductionMode } from '$docs/stores/stores';
-	import TableOfContents from '$lib/components/TableOfContents/TableOfContents.svelte';
+	import { TableOfContents } from '@skeletonlabs/skeleton';
 
 	// Props
-	export let sidebar: boolean = true;
+	export let sidebar = true;
 	export let tocKey: any = undefined;
 
 	// Classes
@@ -28,6 +28,7 @@
 			<!-- Ad Position -->
 			{#if $storeVercelProductionMode === true}
 				<!-- Production Ad -->
+				<!-- cspell:disable -->
 				<!-- cspell:disable -->
 				<!-- cspell:disable -->
 				<script

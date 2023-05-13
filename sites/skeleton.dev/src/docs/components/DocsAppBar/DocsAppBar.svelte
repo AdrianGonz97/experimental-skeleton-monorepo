@@ -3,23 +3,18 @@
 	import { enhance, type SubmitFunction } from '$app/forms';
 
 	// Types
-	import type { ModalSettings, ModalComponent } from '$lib/utilities/Modal/types';
-	import type { DrawerSettings } from '$lib/utilities/Drawer/types';
+	import type { ModalSettings, DrawerSettings } from '@skeletonlabs/skeleton';
 
 	// Docs
 	import DocsLogoFull from '$docs/components/DocsLogos/DocsLogoFull.svelte';
 	import DocsIcon from '$docs/components/DocsIcon/DocsIcon.svelte';
 
-	// Components
-	import AppBar from '$lib/components/AppBar/AppBar.svelte';
-	// Utilities
-	import LightSwitch from '$lib/utilities/LightSwitch/LightSwitch.svelte';
-	import { popup } from '$lib/utilities/Popup/popup';
-	import { modalStore } from '$lib/utilities/Modal/stores';
+	// Components & Utilities
+	import { AppBar, LightSwitch, popup, modalStore } from '@skeletonlabs/skeleton';
 
 	// Stores
 	import { storeTheme } from '$docs/stores/stores';
-	import { drawerStore } from '$lib/utilities/Drawer/stores';
+	import { drawerStore } from '@skeletonlabs/skeleton';
 
 	// Local
 	let isOsMac = false;

@@ -1,7 +1,6 @@
 <script lang="ts">
 	import hljs from 'highlight.js';
 	import { onMount } from 'svelte';
-	import { page } from '$app/stores';
 
 	// +page.ts
 	import type { PageData } from './$types';
@@ -11,7 +10,7 @@
 	import { blogDateFormatter } from '../blog-service';
 
 	// Components
-	import Avatar from '$lib/components/Avatar/Avatar.svelte';
+	import { Avatar } from '@skeletonlabs/skeleton';
 
 	// Local
 	let elemPage: HTMLElement | null;

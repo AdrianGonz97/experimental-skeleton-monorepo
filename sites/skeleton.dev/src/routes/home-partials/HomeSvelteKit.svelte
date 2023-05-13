@@ -1,23 +1,16 @@
 <script lang="ts">
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	// Utilities
-	import type { ModalSettings } from '$lib/utilities/Modal/types';
-	import { modalStore } from '$lib/utilities/Modal/stores';
+	import { modalStore, type ModalSettings } from '@skeletonlabs/skeleton';
 	// Components
-	import Accordion from '$lib/components/Accordion/Accordion.svelte';
-	import AccordionItem from '$lib/components/Accordion/AccordionItem.svelte';
-	import ListBox from '$lib/components/ListBox/ListBox.svelte';
-	import ListBoxItem from '$lib/components/ListBox/ListBoxItem.svelte';
+	import { Accordion, AccordionItem, ListBox, ListBoxItem } from '@skeletonlabs/skeleton';
 	// Actions
-	import { filter } from '$lib/actions/Filters/filter';
+	import { filter } from '@skeletonlabs/skeleton';
 	// Filter SVGs
-	import Apollo from '$lib/actions/Filters/svg-filters/Apollo.svelte';
-	import BlueNight from '$lib/actions/Filters/svg-filters/BlueNight.svelte';
-	import Emerald from '$lib/actions/Filters/svg-filters/Emerald.svelte';
-	import Noir from '$lib/actions/Filters/svg-filters/Noir.svelte';
+	import { Apollo, BlueNight, Emerald, Noir } from '@skeletonlabs/skeleton';
 
 	// Local
-	let showcase: string = 'components';
+	let showcase = 'components';
 	const imgPlaceholder = `https://source.unsplash.com/YOErFW8AfkI/200x200`;
 
 	function modalDemo(): void {
