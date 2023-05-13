@@ -12,10 +12,10 @@ const config = {
 		})
 	],
 	kit: {
-		adapter: adapter(), // TODO: Remove
+		adapter: adapter(),
 		// https://kit.svelte.dev/docs/configuration#alias
 		alias: {
-			'@skeletonlabs/skeleton': path.resolve('./src/lib/index.ts'),
+			'@skeletonlabs/skeleton': path.resolve('../../packages/skeleton/src/lib'),
 			$docs: path.resolve('./src/docs')
 		}
 	}
