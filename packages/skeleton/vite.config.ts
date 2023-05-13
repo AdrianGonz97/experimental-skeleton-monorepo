@@ -9,6 +9,9 @@ const config: UserConfig = {
 		globals: true,
 		environment: 'jsdom',
 		exclude: [...configDefaults.exclude, '**/package/**', '**/build/**']
+	},
+	server: {
+		port: 9090
 	}
 };
 
