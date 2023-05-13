@@ -1,7 +1,8 @@
 // Lightswitch Service
 
 import { get } from 'svelte/store';
-import { localStorageStore } from '@skeletonlabs/skeleton';
+// DO NOT replace this ⬇ import, it has to be imported directly
+import { localStorageStore } from '../LocalStorageStore/LocalStorageStore';
 
 // Stores ---
 // TRUE: light, FALSE: dark
