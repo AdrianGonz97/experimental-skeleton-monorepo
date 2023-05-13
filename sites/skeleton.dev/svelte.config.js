@@ -16,6 +16,7 @@ const config = {
 		// https://kit.svelte.dev/docs/configuration#alias
 		alias: {
 			'@skeletonlabs/skeleton': path.resolve('../../packages/skeleton/src/lib'),
+			$lib: path.resolve('../../packages/skeleton/src/lib'),
 			$docs: path.resolve('./src/docs')
 		}
 	}
