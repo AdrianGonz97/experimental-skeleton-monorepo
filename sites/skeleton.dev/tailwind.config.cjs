@@ -13,6 +13,6 @@ module.exports = {
 	plugins: [
 		require('@tailwindcss/forms'),
 		require('@tailwindcss/typography'),
-		...require('@skeletonlabs/skeleton/src/tailwind/skeleton.cjs')({ intellisense: false })
+		...require('../../packages/skeleton/src/lib/tailwind/skeleton.cjs')({ intellisense: false })
 	]
 };
