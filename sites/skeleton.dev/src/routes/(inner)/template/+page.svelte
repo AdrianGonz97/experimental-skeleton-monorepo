@@ -5,7 +5,7 @@
 	// Utilities
 	import { CodeBlock } from '@skeletonlabs/skeleton';
 	// Sveld
-	// import sveldComp from '@skeletonlabs/skeleton/component/.../Component.svelte?raw&sveld';
+	// import sveldComp from '@skeletonlabs/skeleton/.../Component.svelte?raw&sveld';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {
