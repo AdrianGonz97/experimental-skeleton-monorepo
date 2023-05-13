@@ -1,8 +1,9 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
+const SKELETON_PATH = '../../packages/skeleton/src/lib';
 module.exports = {
 	darkMode: 'class',
-	content: ['./src/**/*.{html,js,svelte,ts}'],
+	content: ['./src/**/*.{html,js,svelte,ts}', `${SKELETON_PATH}/**/*.{html,js,svelte,ts}`],
 	theme: {
 		extend: {
 			fontFamily: {
@@ -13,6 +14,6 @@ module.exports = {
 	plugins: [
 		require('@tailwindcss/forms'),
 		require('@tailwindcss/typography'),
-		...require('../../packages/skeleton/src/lib/tailwind/skeleton.cjs')({ intellisense: false })
+		...require(`${SKELETON_PATH}/tailwind/skeleton.cjs`)({ intellisense: false })
 	]
 };
