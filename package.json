@@ -1,15 +1,35 @@
 {
-	"name": "skeleton-monorepo",
+	"name": "skeleton",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
+	"private": true,
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"postinstall": "pnpm -F skeleton gen:alias"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"license": "MIT",
+	"homepage": "https://skeleton.dev/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/skeletonlabs/skeleton.git"
+	},
+	"bugs": {
+		"url": "https://github.com/skeletonlabs/skeleton/issues"
+	},
+	"keywords": [
+		"cli",
+		"components",
+		"ui",
+		"component",
+		"svelte",
+		"component-library",
+		"ui-components",
+		"ui-framework",
+		"tailwind",
+		"tailwindcss",
+		"components-library",
+		"sveltekit"
+	],
 	"devDependencies": {
 		"cspell": "^6.31.1"
 	}
