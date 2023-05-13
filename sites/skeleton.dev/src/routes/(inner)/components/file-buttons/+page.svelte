@@ -3,10 +3,9 @@
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	// Components
-	import FileButton from '$lib/components/FileButton/FileButton.svelte';
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { FileButton, CodeBlock } from '@skeletonlabs/skeleton';
 	// Sveld
-	import sveldFileButton from '$lib/components/FileButton/FileButton.svelte?raw&sveld';
+	import sveldFileButton from '@skeletonlabs/skeleton/components/FileButton/FileButton.svelte?raw&sveld';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {

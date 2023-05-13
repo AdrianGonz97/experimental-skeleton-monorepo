@@ -5,13 +5,10 @@
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	// Components
-	import AppRail from '$lib/components/AppRail/AppRail.svelte';
-	import AppRailTile from '$lib/components/AppRail/AppRailTile.svelte';
-	// Utilities
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { AppRail, AppRailTile, CodeBlock } from '@skeletonlabs/skeleton';
 	// Sveld
-	import sveldAppRail from '$lib/components/AppRail/AppRail.svelte?raw&sveld';
-	import sveldAppRailTile from '$lib/components/AppRail/AppRailTile.svelte?raw&sveld';
+	import sveldAppRail from '@skeletonlabs/skeleton/components/AppRail/AppRail.svelte?raw&sveld';
+	import sveldAppRailTile from '@skeletonlabs/skeleton/components/AppRail/AppRailTile.svelte?raw&sveld';
 
 	// Stores
 	const storeValue: Writable<number> = writable(0);

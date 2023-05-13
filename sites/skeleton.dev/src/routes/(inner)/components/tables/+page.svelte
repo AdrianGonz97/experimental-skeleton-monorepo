@@ -5,18 +5,12 @@
 	import DocsShell from '$docs/layouts/DocsShell/DocsShell.svelte';
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
-	// Types
-	import type { TableSource } from '$lib/components/Table/types';
 	// Utils
-	import { tableMapperValues } from '$lib/components/Table/utils';
+	import { tableMapperValues } from '@skeletonlabs/skeleton';
 	// Components
-	import Table from '$lib/components/Table/Table.svelte';
-	import TabGroup from '$lib/components/Tab/TabGroup.svelte';
-	import Tab from '$lib/components/Tab/Tab.svelte';
-	// Utilities
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { Table, TabGroup, Tab, CodeBlock, type TableSource } from '@skeletonlabs/skeleton';
 	// Sveld
-	import sveldTable from '$lib/components/Table/Table.svelte?raw&sveld';
+	import sveldTable from '@skeletonlabs/skeleton/components/Table/Table.svelte?raw&sveld';
 
 	// Stores
 	let storeService: Writable<string> = writable('tableMapperValues');
@@ -52,7 +46,7 @@
 	};
 
 	// Local
-	const sourceData: any = Array(5)
+	const sourceData = Array(5)
 		.fill(undefined)
 		.map(() => faker.science.chemicalElement());
 

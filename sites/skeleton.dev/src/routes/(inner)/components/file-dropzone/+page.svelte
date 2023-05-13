@@ -3,10 +3,9 @@
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	// Components
-	import FileDropzone from '$lib/components/FileDropzone/FileDropzone.svelte';
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { FileDropzone, CodeBlock } from '@skeletonlabs/skeleton';
 	// Sveld
-	import sveldFileDropzone from '$lib/components/FileDropzone/FileDropzone.svelte?raw&sveld';
+	import sveldFileDropzone from '@skeletonlabs/skeleton/components/FileDropzone/FileDropzone.svelte?raw&sveld';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {
@@ -22,7 +21,7 @@
 	// Local
 	let files: FileList;
 
-	function onChangeHandler(e: any): void {
+	function onChangeHandler(e: Event): void {
 		console.log('file data:', e);
 		console.log('files:', files);
 	}

@@ -3,11 +3,9 @@
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	// Utilities
-	import ListBox from '$lib/components/ListBox/ListBox.svelte';
-	import ListBoxItem from '$lib/components/ListBox/ListBoxItem.svelte';
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { ListBox, ListBoxItem, CodeBlock } from '@skeletonlabs/skeleton';
 	// Sveld
-	import sveldTableOfContents from '$lib/components/TableOfContents/TableOfContents.svelte?raw&sveld';
+	import sveldTableOfContents from '@skeletonlabs/skeleton/components/TableOfContents/TableOfContents.svelte?raw&sveld';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {

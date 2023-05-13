@@ -3,10 +3,9 @@
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	// Components
-	import SlideToggle from '$lib/components/SlideToggle/SlideToggle.svelte';
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { SlideToggle, CodeBlock } from '@skeletonlabs/skeleton';
 	// Sveld
-	import sveldSlideToggle from '$lib/components/SlideToggle/SlideToggle.svelte?raw&sveld';
+	import sveldSlideToggle from '@skeletonlabs/skeleton/components/SlideToggle/SlideToggle.svelte?raw&sveld';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {

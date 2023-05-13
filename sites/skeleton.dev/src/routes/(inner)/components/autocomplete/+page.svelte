@@ -4,15 +4,11 @@
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	// Types
-	import type { AutocompleteOption } from '$lib/components/Autocomplete/types';
+	import type { AutocompleteOption, PopupSettings } from '@skeletonlabs/skeleton';
 	// Components
-	import Autocomplete from '$lib/components/Autocomplete/Autocomplete.svelte';
-	import InputChip from '$lib/components/InputChip/InputChip.svelte';
-	// Utilities
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
-	import { popup, type PopupSettings } from '@skeletonlabs/skeleton';
+	import { Autocomplete, InputChip, CodeBlock, popup } from '@skeletonlabs/skeleton';
 	// Sveld
-	import sveldAutocomplete from '$lib/components/Autocomplete/Autocomplete.svelte?raw&sveld';
+	import sveldAutocomplete from '@skeletonlabs/skeleton/components/Autocomplete/Autocomplete.svelte?raw&sveld';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {

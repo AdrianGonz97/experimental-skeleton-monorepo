@@ -4,10 +4,9 @@
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	// Components
-	import AppBar from '$lib/components/AppBar/AppBar.svelte';
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { AppBar, CodeBlock } from '@skeletonlabs/skeleton';
 	// Sveld
-	import sveldAppBar from '$lib/components/AppBar/AppBar.svelte?raw&sveld';
+	import sveldAppBar from '@skeletonlabs/skeleton/components/AppBar/AppBar.svelte?raw&sveld';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {

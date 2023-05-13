@@ -4,10 +4,9 @@
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	// Components
-	import AppShell from '$lib/components/AppShell/AppShell.svelte';
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { AppShell, CodeBlock } from '@skeletonlabs/skeleton';
 	// Sveld
-	import sveldAppShell from '$lib/components/AppShell/AppShell.svelte?raw&sveld';
+	import sveldAppShell from '@skeletonlabs/skeleton/components/AppShell/AppShell.svelte?raw&sveld';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {
@@ -20,7 +19,7 @@
 	};
 
 	// Local
-	let state: any = {
+	let state = {
 		header: true,
 		pageHeader: false,
 		sidebarLeft: true,
@@ -29,7 +28,7 @@
 		footer: false
 	};
 
-	function toggle(key: string): void {
+	function toggle(key: keyof typeof state): void {
 		state[key] = !state[key];
 	}
 </script>

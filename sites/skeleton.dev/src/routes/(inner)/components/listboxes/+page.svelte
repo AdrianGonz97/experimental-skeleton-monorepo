@@ -3,12 +3,10 @@
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	// Components
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
-	import ListBox from '$lib/components/ListBox/ListBox.svelte';
-	import ListBoxItem from '$lib/components/ListBox/ListBoxItem.svelte';
+	import { CodeBlock, ListBox, ListBoxItem } from '@skeletonlabs/skeleton';
 	// Sveld
-	import sveldListBox from '$lib/components/ListBox/ListBox.svelte?raw&sveld';
-	import sveldListBoxItem from '$lib/components/ListBox/ListBoxItem.svelte?raw&sveld';
+	import sveldListBox from '@skeletonlabs/skeleton/components/ListBox/ListBox.svelte?raw&sveld';
+	import sveldListBoxItem from '@skeletonlabs/skeleton/components/ListBox/ListBoxItem.svelte?raw&sveld';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {
@@ -30,8 +28,8 @@
 	};
 
 	// Local
-	let valueSingle: string = 'books';
-	let valueMultiple: string[] = ['books', 'movies'];
+	let valueSingle = 'books';
+	let valueMultiple = ['books', 'movies'];
 </script>
 
 <DocsShell {settings}>

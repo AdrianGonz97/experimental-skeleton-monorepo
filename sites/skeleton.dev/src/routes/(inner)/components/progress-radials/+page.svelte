@@ -3,10 +3,9 @@
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	// Components
-	import ProgressRadial from '$lib/components/ProgressRadial/ProgressRadial.svelte';
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { ProgressRadial, CodeBlock } from '@skeletonlabs/skeleton';
 	// Sveld
-	import sveldProgressRadial from '$lib/components/ProgressRadial/ProgressRadial.svelte?raw&sveld';
+	import sveldProgressRadial from '@skeletonlabs/skeleton/components/ProgressRadial/ProgressRadial.svelte?raw&sveld';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {

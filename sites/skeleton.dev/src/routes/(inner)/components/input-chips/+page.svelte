@@ -2,13 +2,10 @@
 	import DocsShell from '$docs/layouts/DocsShell/DocsShell.svelte';
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
-	// Utilities
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
 	// Components
-	import InputChip from '$lib/components/InputChip/InputChip.svelte';
+	import { CodeBlock, InputChip, toastStore } from '@skeletonlabs/skeleton';
 	// Sveld
-	import sveldInputChip from '$lib/components/InputChip/InputChip.svelte?raw&sveld';
-	import { toastStore } from '$lib/utilities/Toast/stores';
+	import sveldInputChip from '@skeletonlabs/skeleton/components/InputChip/InputChip.svelte?raw&sveld';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {

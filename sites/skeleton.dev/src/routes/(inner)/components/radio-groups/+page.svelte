@@ -3,12 +3,10 @@
 	import DocsShell from '$docs/layouts/DocsShell/DocsShell.svelte';
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	// Components
-	import RadioGroup from '$lib/components/Radio/RadioGroup.svelte';
-	import RadioItem from '$lib/components/Radio/RadioItem.svelte';
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { RadioGroup, RadioItem, CodeBlock } from '@skeletonlabs/skeleton';
 	// Sveld
-	import sveldRadioGroup from '$lib/components/Radio/RadioGroup.svelte?raw&sveld';
-	import sveldRadioItem from '$lib/components/Radio/RadioItem.svelte?raw&sveld';
+	import sveldRadioGroup from '@skeletonlabs/skeleton/components/Radio/RadioGroup.svelte?raw&sveld';
+	import sveldRadioItem from '@skeletonlabs/skeleton/components/Radio/RadioItem.svelte?raw&sveld';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {
@@ -31,9 +29,9 @@
 	};
 
 	// Local
-	let justify: number = 0;
-	let timeHorizontal: string = 'months';
-	let timeVertical: string = 'Millennia';
+	let justify = 0;
+	let timeHorizontal = 'months';
+	let timeVertical = 'Millennia';
 	let timeNames = ['Millennia', 'Epochs', 'Eras', 'Eons'];
 </script>
 

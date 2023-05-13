@@ -3,10 +3,9 @@
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	// Components
-	import ProgressBar from '$lib/components/ProgressBar/ProgressBar.svelte';
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { ProgressBar, CodeBlock } from '@skeletonlabs/skeleton';
 	// Sveld
-	import sveldProgressBar from '$lib/components/ProgressBar/ProgressBar.svelte?raw&sveld';
+	import sveldProgressBar from '@skeletonlabs/skeleton/components/ProgressBar/ProgressBar.svelte?raw&sveld';
 
 	// Defaults
 	const defaultRounded = 'rounded-token';

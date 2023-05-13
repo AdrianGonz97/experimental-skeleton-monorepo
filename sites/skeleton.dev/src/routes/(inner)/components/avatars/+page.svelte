@@ -4,23 +4,11 @@
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	// Components
-	import Avatar from '$lib/components/Avatar/Avatar.svelte';
-	// Utilities
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
-	// Actions
-	import { filter } from '$lib/actions/Filters/filter';
+	import { Avatar, CodeBlock, filter } from '@skeletonlabs/skeleton';
 	// Filter SVGs
-	import Apollo from '$lib/actions/Filters/svg-filters/Apollo.svelte';
-	import BlueNight from '$lib/actions/Filters/svg-filters/BlueNight.svelte';
-	import Emerald from '$lib/actions/Filters/svg-filters/Emerald.svelte';
-	import GreenFall from '$lib/actions/Filters/svg-filters/GreenFall.svelte';
-	import Noir from '$lib/actions/Filters/svg-filters/Noir.svelte';
-	import NoirLight from '$lib/actions/Filters/svg-filters/NoirLight.svelte';
-	import Rustic from '$lib/actions/Filters/svg-filters/Rustic.svelte';
-	import Summer84 from '$lib/actions/Filters/svg-filters/Summer84.svelte';
-	import XPro from '$lib/actions/Filters/svg-filters/XPro.svelte';
+	import { Apollo, BlueNight, Emerald, GreenFall, Noir, NoirLight, Rustic, Summer84, XPro } from '@skeletonlabs/skeleton';
 	// Sveld
-	import sveldAvatar from '$lib/components/Avatar/Avatar.svelte?raw&sveld';
+	import sveldAvatar from '@skeletonlabs/skeleton/components/Avatar/Avatar.svelte?raw&sveld';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {

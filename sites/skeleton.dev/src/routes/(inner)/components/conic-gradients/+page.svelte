@@ -3,13 +3,9 @@
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	// Components
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
-	import ConicGradient from '$lib/components/ConicGradient/ConicGradient.svelte';
-	import type { ConicStop } from '$lib/components/ConicGradient/types';
-	import TabGroup from '$lib/components/Tab/TabGroup.svelte';
-	import Tab from '$lib/components/Tab/Tab.svelte';
+	import { CodeBlock, ConicGradient, Tab, TabGroup, type ConicStop } from '@skeletonlabs/skeleton';
 	// Sveld
-	import sveldConicGradient from '$lib/components/ConicGradient/ConicGradient.svelte?raw&sveld';
+	import sveldConicGradient from '@skeletonlabs/skeleton/components/ConicGradient/ConicGradient.svelte?raw&sveld';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {
@@ -23,7 +19,7 @@
 	};
 
 	// Local
-	let tabColors: number = 0;
+	let tabColors = 0;
 
 	// Color Stops
 	let stopsDemo: ConicStop[] = [

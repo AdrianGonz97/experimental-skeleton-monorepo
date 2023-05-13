@@ -3,12 +3,10 @@
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	// Components
-	import TabGroup from '$lib/components/Tab/TabGroup.svelte';
-	import Tab from '$lib/components/Tab/Tab.svelte';
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { TabGroup, Tab, CodeBlock } from '@skeletonlabs/skeleton';
 	// Sveld
-	import sveldTabGroup from '$lib/components/Tab/TabGroup.svelte?raw&sveld';
-	import sveldTab from '$lib/components/Tab/Tab.svelte?raw&sveld';
+	import sveldTabGroup from '@skeletonlabs/skeleton/components/Tab/TabGroup.svelte?raw&sveld';
+	import sveldTab from '@skeletonlabs/skeleton/components/Tab/Tab.svelte?raw&sveld';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {
@@ -25,9 +23,9 @@
 	};
 
 	// Local
-	let tabsBasic: number = 0;
-	let tabsFancy: number = 0;
-	let tabsBottomNav: number = 0;
+	let tabsBasic = 0;
+	let tabsFancy = 0;
+	let tabsBottomNav = 0;
 	let desc = {
 		books: 'A written or printed work consisting of pages glued or sewn together along one side and bound in covers.',
 		movies: 'A story or event recorded by a camera as a set of moving images and shown in a theater or on television; a motion picture.',

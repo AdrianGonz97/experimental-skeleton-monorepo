@@ -5,13 +5,9 @@
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	// Components
-	import Paginator from '$lib/components/Paginator/Paginator.svelte';
-	import Table from '$lib/components/Table/Table.svelte';
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
-	// Types
-	import type { PaginationSettings } from '$lib/components/Paginator/types';
+	import { Paginator, Table, CodeBlock, type PaginationSettings } from '@skeletonlabs/skeleton';
 	// Sveld
-	import sveldPaginator from '$lib/components/Paginator/Paginator.svelte?raw&sveld';
+	import sveldPaginator from '@skeletonlabs/skeleton/components/Paginator/Paginator.svelte?raw&sveld';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {
@@ -24,7 +20,7 @@
 	};
 	// Local
 	const sourceHeaders: string[] = ['Name', 'Symbol', 'atomic Number'];
-	const sourceBody: any = Array(27)
+	const sourceBody = Array(27)
 		.fill(undefined)
 		.map(() => Object.values(faker.science.chemicalElement()));
 

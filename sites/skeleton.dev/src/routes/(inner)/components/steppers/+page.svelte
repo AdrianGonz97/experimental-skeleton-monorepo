@@ -3,13 +3,10 @@
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	// Components
-	import Stepper from '$lib/components/Stepper/Stepper.svelte';
-	import Step from '$lib/components/Stepper/Step.svelte';
-	import SlideToggle from '$lib/components/SlideToggle/SlideToggle.svelte';
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { Stepper, Step, SlideToggle, CodeBlock } from '@skeletonlabs/skeleton';
 	// Sveld
-	import sveldStepper from '$lib/components/Stepper/Stepper.svelte?raw&sveld';
-	import sveldStep from '$lib/components/Stepper/Step.svelte?raw&sveld';
+	import sveldStepper from '@skeletonlabs/skeleton/components/Stepper/Stepper.svelte?raw&sveld';
+	import sveldStep from '@skeletonlabs/skeleton/components/Stepper/Step.svelte?raw&sveld';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {
@@ -39,7 +36,7 @@
 	};
 
 	// Local
-	let locked: boolean = true;
+	let locked = true;
 
 	function onNextHandler(e: any): void {
 		console.log('event:next', e.detail);
