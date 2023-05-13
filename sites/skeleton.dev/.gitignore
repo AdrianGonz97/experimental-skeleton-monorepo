@@ -7,7 +7,6 @@ dist
 .env.*
 !.env.example
 coverage
-pnpm-lock.yaml
 .temp
 src/lib/tailwind/generated
 *.tgz
