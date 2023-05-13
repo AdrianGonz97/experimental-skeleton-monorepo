@@ -7,7 +7,7 @@
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	import { variants } from '$docs/components/DocsPreview/options';
 	// Components
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { CodeBlock } from '@skeletonlabs/skeleton';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {

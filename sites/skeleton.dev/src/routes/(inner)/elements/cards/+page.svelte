@@ -4,8 +4,7 @@
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	import { variants } from '$docs/components/DocsPreview/options';
 	// Components
-	import Avatar from '$lib/components/Avatar/Avatar.svelte';
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { Avatar, CodeBlock } from '@skeletonlabs/skeleton';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {

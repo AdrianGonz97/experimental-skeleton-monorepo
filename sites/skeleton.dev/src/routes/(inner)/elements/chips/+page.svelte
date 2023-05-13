@@ -3,11 +3,8 @@
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	import { variants } from '$docs/components/DocsPreview/options';
-	// Types
-	import type { ToastSettings } from '$lib/utilities/Toast/types';
 	// Components
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
-	import { toastStore } from '$lib/utilities/Toast/stores';
+	import { CodeBlock, toastStore, type ToastSettings } from '@skeletonlabs/skeleton';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {

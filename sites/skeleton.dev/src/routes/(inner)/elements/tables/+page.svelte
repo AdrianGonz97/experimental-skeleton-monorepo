@@ -5,9 +5,7 @@
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	// Components
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
-	import TabGroup from '$lib/components/Tab/TabGroup.svelte';
-	import Tab from '$lib/components/Tab/Tab.svelte';
+	import { CodeBlock, TabGroup, Tab } from '@skeletonlabs/skeleton';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {
@@ -36,8 +34,8 @@
 	};
 
 	// Local
-	let tabSet: number = 0;
-	const tableArr: any = Array(5)
+	let tabSet = 0;
+	const tableArr = Array(5)
 		.fill(undefined)
 		.map(() => faker.science.chemicalElement());
 </script>
