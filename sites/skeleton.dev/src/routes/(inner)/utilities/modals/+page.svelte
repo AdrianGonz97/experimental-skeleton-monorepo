@@ -6,21 +6,17 @@
 	// Modal Examples (see also root layout)
 	import ModalExampleForm from '$docs/modals/examples/ModalExampleForm.svelte';
 	// Components
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
-	import Accordion from '$lib/components/Accordion/Accordion.svelte';
-	import AccordionItem from '$lib/components/Accordion/AccordionItem.svelte';
-	import TabGroup from '$lib/components/Tab/TabGroup.svelte';
-	import Tab from '$lib/components/Tab/Tab.svelte';
+	import { CodeBlock, Accordion, AccordionItem, Tab, TabGroup } from '@skeletonlabs/skeleton';
 
 	// Sveld
-	import sveldModal from '$lib/utilities/Modal/Modal.svelte?raw&sveld';
+	import sveldModal from '@skeletonlabs/skeleton/utilities/Modal/Modal.svelte?raw&sveld';
 
 	// Modals Utils
-	import type { ModalSettings, ModalComponent } from '$lib/utilities/Modal/types';
-	import { modalStore } from '$lib/utilities/Modal/stores';
+	import type { ModalSettings, ModalComponent } from '@skeletonlabs/skeleton';
+	import { modalStore } from '@skeletonlabs/skeleton';
 
 	// Stores
-	let tabCustom: string = 'register';
+	let tabCustom = 'register';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {

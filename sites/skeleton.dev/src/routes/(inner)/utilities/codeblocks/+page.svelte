@@ -3,9 +3,9 @@
 	import DocsShell from '$docs/layouts/DocsShell/DocsShell.svelte';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { CodeBlock } from '@skeletonlabs/skeleton';
 
-	import sveldCodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte?raw&sveld';
+	import sveldCodeBlock from '@skeletonlabs/skeleton/utilities/CodeBlock/CodeBlock.svelte?raw&sveld';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {

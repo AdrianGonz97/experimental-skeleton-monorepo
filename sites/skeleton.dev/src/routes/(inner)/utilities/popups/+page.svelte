@@ -3,13 +3,9 @@
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	// Components
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
-	import Avatar from '$lib/components/Avatar/Avatar.svelte';
-	import ListBox from '$lib/components/ListBox/ListBox.svelte';
-	import ListBoxItem from '$lib/components/ListBox/ListBoxItem.svelte';
+	import { CodeBlock, Avatar, ListBox, ListBoxItem } from '@skeletonlabs/skeleton';
 	// Popups
-	import { popup } from '$lib/utilities/Popup/popup';
-	import type { PopupSettings } from '$lib/utilities/Popup/types';
+	import { popup, type PopupSettings } from '@skeletonlabs/skeleton';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {

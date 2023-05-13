@@ -3,13 +3,12 @@
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	// Components
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { CodeBlock } from '@skeletonlabs/skeleton';
 	// Sveld
-	import sveldDrawer from '$lib/utilities/Drawer/Drawer.svelte?raw&sveld';
+	import sveldDrawer from '@skeletonlabs/skeleton/utilities/Drawer/Drawer.svelte?raw&sveld';
 
 	// Drawer Utils
-	import { drawerStore } from '$lib/utilities/Drawer/stores';
-	import type { DrawerSettings } from '$lib/utilities/Drawer/types';
+	import { drawerStore, type DrawerSettings } from '@skeletonlabs/skeleton';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {

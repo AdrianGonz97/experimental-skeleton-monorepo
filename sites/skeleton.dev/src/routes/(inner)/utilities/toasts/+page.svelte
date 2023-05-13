@@ -1,13 +1,12 @@
 <script lang="ts">
 	import DocsShell from '$docs/layouts/DocsShell/DocsShell.svelte';
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
+	import { CodeBlock } from '@skeletonlabs/skeleton';
 	// Toasts
-	import type { ToastSettings } from '$lib/utilities/Toast/types';
-	import { toastStore } from '$lib/utilities/Toast/stores';
+	import { toastStore, type ToastSettings } from '@skeletonlabs/skeleton';
 	// Sveld
-	import sveldToast from '$lib/utilities/Toast/Toast.svelte?raw&sveld';
+	import sveldToast from '@skeletonlabs/skeleton/utilities/Toast/Toast.svelte?raw&sveld';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {

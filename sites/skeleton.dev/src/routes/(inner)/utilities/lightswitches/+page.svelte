@@ -3,12 +3,9 @@
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 	import DocsPreview from '$docs/components/DocsPreview/DocsPreview.svelte';
 	// Components
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
-	import LightSwitch from '$lib/utilities/LightSwitch/LightSwitch.svelte';
-	import Tab from '$lib/components/Tab/Tab.svelte';
-	import TabGroup from '$lib/components/Tab/TabGroup.svelte';
+	import { CodeBlock, LightSwitch, Tab, TabGroup } from '@skeletonlabs/skeleton';
 	// Sveld
-	import sveldLightSwitch from '$lib/utilities/LightSwitch/LightSwitch.svelte?raw&sveld';
+	import sveldLightSwitch from '@skeletonlabs/skeleton/utilities/LightSwitch/LightSwitch.svelte?raw&sveld';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {
@@ -23,8 +20,8 @@
 	};
 
 	// Local
-	let tabSection: number = 0;
-	let tabInterface: number = 0;
+	let tabSection = 0;
+	let tabInterface = 0;
 	// prettier-ignore
 	const snippetAutoModeWatcher = '\<svelte:head\>{@html `\<script\>${autoModeWatcher.toString()} autoModeWatcher();\</script\>`}\</svelte:head\>';
 	// prettier-ignore

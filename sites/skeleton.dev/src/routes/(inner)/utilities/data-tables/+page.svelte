@@ -8,11 +8,9 @@
 	import { DocsFeature, type DocsShellSettings } from '$docs/layouts/DocsShell/types';
 
 	// Components
-	import Avatar from '$lib/components/Avatar/Avatar.svelte';
-	import Paginator from '$lib/components/Paginator/Paginator.svelte';
+	import { Avatar, Paginator, CodeBlock } from '@skeletonlabs/skeleton';
 	// Utilities
-	import { createDataTableStore, dataTableHandler, tableInteraction, tableA11y } from '$lib/utilities/DataTable/DataTable';
-	import CodeBlock from '$lib/utilities/CodeBlock/CodeBlock.svelte';
+	import { createDataTableStore, dataTableHandler, tableInteraction, tableA11y } from '@skeletonlabs/skeleton';
 
 	// Docs Shell
 	const settings: DocsShellSettings = {
