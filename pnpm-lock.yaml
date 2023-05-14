@@ -75,6 +75,7 @@ importers:
     specifiers:
       '@faker-js/faker': ^7.6.0
       '@floating-ui/dom': ^1.2.5
+      '@skeletonlabs/skeleton': workspace:*
       '@sveltejs/adapter-vercel': ^2.4.3
       '@sveltejs/kit': ^1.15.0
       '@tailwindcss/forms': ^0.5.3
@@ -102,6 +103,7 @@ importers:
     devDependencies:
       '@faker-js/faker': 7.6.0
       '@floating-ui/dom': 1.2.8
+      '@skeletonlabs/skeleton': link:../../packages/skeleton
       '@sveltejs/adapter-vercel': 2.4.3_@sveltejs+kit@1.16.3
       '@sveltejs/kit': 1.16.3_svelte@3.59.1+vite@4.3.5
       '@tailwindcss/forms': 0.5.3_tailwindcss@3.3.2
