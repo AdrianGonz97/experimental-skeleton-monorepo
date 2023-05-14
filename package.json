@@ -5,6 +5,8 @@
 	"private": true,
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
+		"preinstall": "npx only-allow pnpm",
+		"getall": "node scripts/checkout.cjs",
 		"csa": "node ./packages/create-skeleton-app/src/index.js --types=typescript --prettier --eslint --playwright=false --vitest=false --codeblocks=true --popups=true --typography=false --forms=false -t=skeleton --skeletontemplate=welcome -p=sites --monorepo"
 	},
 	"license": "MIT",
