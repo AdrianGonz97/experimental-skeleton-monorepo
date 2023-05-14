@@ -4,7 +4,8 @@
 	"description": "monorepo for @skeletonlabs/skeleton",
 	"private": true,
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"csa": "node ./packages/create-skeleton-app/src/index.js --types=typescript --prettier --eslint --playwright=false --vitest=false --codeblocks=true --popups=true --typography=false --forms=false -t=skeleton --skeletontemplate=welcome -p=sites --monorepo"
 	},
 	"license": "MIT",
 	"homepage": "https://skeleton.dev/",
@@ -30,7 +31,8 @@
 		"sveltekit"
 	],
 	"devDependencies": {
-		"cspell": "^6.31.1"
+		"cspell": "^6.31.1",
+		"shelljs": "^0.8.5"
 	},
 	"packageManager": "pnpm@7.30.3",
 	"engines": {
