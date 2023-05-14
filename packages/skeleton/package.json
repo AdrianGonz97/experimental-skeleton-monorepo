@@ -77,27 +77,20 @@
 	},
 	"exports": {
 		".": {
-			"types": "./dist/index.d.ts",
-			"svelte": "./dist/index.js",
-			"default": "./dist/index.js"
+			"types": "./src/lib/index.d.ts",
+			"svelte": "./src/lib/index.js",
+			"default": "./src/lib/index.js"
 		},
-		"./styles/*": "./src/lib/styles/*",
-		"./tailwind/*": "./src/lib/tailwind/*",
-		"./themes/*": "./src/lib/themes/*"
+		"./*": "./src/lib/*"
 	},
 	"files": [
-		"./dist/**/*.svelte",
-		"./dist/**/*.js",
-		"./dist/**/*.d.ts",
-		"./src/lib/styles/*",
-		"./src/lib/tailwind/*",
-		"./src/lib/themes/*",
+		"./src/lib/*",
 		"!./dist/**/*.test.*"
 	],
 	"typesVersions": {
 		">4.0": {
 			"index": [
-				"./dist/index.d.ts"
+				"./src/lib/index.d.ts"
 			]
 		}
 	}

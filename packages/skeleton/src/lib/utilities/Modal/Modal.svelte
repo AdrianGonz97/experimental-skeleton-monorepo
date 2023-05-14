@@ -6,9 +6,9 @@
 	const dispatch = createEventDispatcher();
 
 	// Types
-	import type { CssClasses } from '@skeletonlabs/skeleton';
+	import type { CssClasses } from '../..';
 
-	import { focusTrap, modalStore } from '@skeletonlabs/skeleton';
+	import { focusTrap, modalStore } from '../..';
 	import type { ModalComponent, ModalSettings } from './types';
 
 	// Props

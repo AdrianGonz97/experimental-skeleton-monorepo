@@ -1,6 +1,6 @@
 <script lang="ts">
 	// Types
-	import type { CssClasses } from '@skeletonlabs/skeleton';
+	import type { CssClasses } from '../..';
 
 	// Props (initials)
 	/** Initials only - Provide up to two text characters. */

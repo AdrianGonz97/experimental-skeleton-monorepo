@@ -9,7 +9,7 @@
 	 */
 
 	// Types
-	import type { CssClasses } from '@skeletonlabs/skeleton';
+	import type { CssClasses } from '../..';
 
 	// Props (regions)
 	/** Apply arbitrary classes to the entire `#page` region. */

@@ -3,7 +3,7 @@
 	import { tailwindDefaultColors } from './settings';
 
 	// Types
-	import type { CssClasses } from '@skeletonlabs/skeleton';
+	import type { CssClasses } from '../..';
 	import type { ConicStop } from './types';
 
 	// Props

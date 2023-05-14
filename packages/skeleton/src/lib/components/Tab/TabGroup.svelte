@@ -7,7 +7,7 @@
 	import { setContext } from 'svelte';
 
 	// Types
-	import type { CssClasses } from '@skeletonlabs/skeleton';
+	import type { CssClasses } from '../..';
 
 	// Props (Group)
 	/** Provide classes to set the tab list flex justification. */

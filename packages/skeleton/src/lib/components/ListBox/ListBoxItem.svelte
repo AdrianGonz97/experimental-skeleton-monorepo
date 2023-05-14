@@ -8,7 +8,7 @@
 	import { getContext } from 'svelte';
 
 	// Types
-	import type { CssClasses } from '@skeletonlabs/skeleton';
+	import type { CssClasses } from '../..';
 
 	// Props
 	/** Set the radio group binding value. */
