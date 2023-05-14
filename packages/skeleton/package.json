@@ -76,6 +76,11 @@
 		"svelte": "^3.58.0"
 	},
 	"exports": {
+		".": {
+			"types": "./src/lib/index.d.ts",
+			"svelte": "./src/lib/index.ts",
+			"default": "./src/lib/index.ts"
+		},
 		"./*": "./src/lib/*"
 	},
 	"files": [
