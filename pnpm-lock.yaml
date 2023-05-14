@@ -93,7 +93,6 @@ importers:
       sveld: ^0.18.0
       svelte: ^3.58.0
       svelte-check: ^3.1.4
-      svelte-preprocess: ^5.0.3
       tailwindcss: ^3.3.1
       tslib: ^2.5.0
       typescript: ^4.9.5
@@ -121,7 +120,6 @@ importers:
       sveld: 0.18.0_postcss@8.4.23
       svelte: 3.59.1
       svelte-check: 3.3.2_khbgcxvs26q4wt5njsvueqdbaq
-      svelte-preprocess: 5.0.3_mpt7qh2m3nlmsgsk5py4d6fxk4
       tailwindcss: 3.3.2
       tslib: 2.5.0
       typescript: 4.9.5
@@ -4220,54 +4218,6 @@ packages:
       strip-indent: 3.0.0
       svelte: 3.59.1
       typescript: 5.0.4
-    dev: true
-
-  /svelte-preprocess/5.0.3_mpt7qh2m3nlmsgsk5py4d6fxk4:
-    resolution: {integrity: sha512-GrHF1rusdJVbOZOwgPWtpqmaexkydznKzy5qIC2FabgpFyKN57bjMUUUqPRfbBXK5igiEWn1uO/DXsa2vJ5VHA==}
-    engines: {node: '>= 14.10.0'}
-    requiresBuild: true
-    peerDependencies:
-      '@babel/core': ^7.10.2
-      coffeescript: ^2.5.1
-      less: ^3.11.3 || ^4.0.0
-      postcss: ^7 || ^8
-      postcss-load-config: ^2.1.0 || ^3.0.0 || ^4.0.0
-      pug: ^3.0.0
-      sass: ^1.26.8
-      stylus: ^0.55.0
-      sugarss: ^2.0.0 || ^3.0.0 || ^4.0.0
-      svelte: ^3.23.0
-      typescript: '>=3.9.5 || ^4.0.0 || ^5.0.0'
-    peerDependenciesMeta:
-      '@babel/core':
-        optional: true
-      coffeescript:
-        optional: true
-      less:
-        optional: true
-      postcss:
-        optional: true
-      postcss-load-config:
-        optional: true
-      pug:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      typescript:
-        optional: true
-    dependencies:
-      '@types/pug': 2.0.6
-      detect-indent: 6.1.0
-      magic-string: 0.27.0
-      postcss: 8.4.23
-      sorcery: 0.11.0
-      strip-indent: 3.0.0
-      svelte: 3.59.1
-      typescript: 4.9.5
     dev: true
 
   /svelte-preprocess/5.0.3_xcnqunvit2lrk76kfcpuncfs3u:
