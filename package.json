@@ -4,8 +4,7 @@
 	"description": "monorepo for @skeletonlabs/skeleton",
 	"private": true,
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"postinstall": "pnpm -r gen:alias"
+		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"license": "MIT",
 	"homepage": "https://skeleton.dev/",
