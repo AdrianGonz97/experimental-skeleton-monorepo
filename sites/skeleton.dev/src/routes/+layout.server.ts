@@ -9,6 +9,6 @@ export const load: LayoutServerLoad = async ({ cookies }) => {
 		theme = 'skeleton';
 	}
 	// Imports theme as a string
-	const modules = import.meta.glob(`@skeletonlabs/skeleton/themes/*.css`, { as: 'raw' });
+	const modules = import.meta.glob(`/../../packages/skeleton/src/lib/themes/*.css`, { as: 'raw' });
 	return { currentTheme: modules[`../../packages/skeleton/src/lib/themes/theme-${theme}.css`](), vercelEnv: VERCEL_ENV };
 };

@@ -1,3 +1,3 @@
 packages:
-  - "packages/*"
-  - "sites/*"
+  - "packages/skeleton"
+  - "sites/skeleton.dev"

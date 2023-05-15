@@ -5,7 +5,7 @@
 	import { fade } from 'svelte/transition';
 
 	// Types
-	import type { CssClasses } from '@skeletonlabs/skeleton';
+	import type { CssClasses } from '../..';
 
 	// Props
 	export let locked = false;

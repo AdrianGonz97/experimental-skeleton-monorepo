@@ -2,7 +2,7 @@
 	import { setContext } from 'svelte';
 
 	// Types
-	import type { CssClasses } from '@skeletonlabs/skeleton';
+	import type { CssClasses } from '../..';
 
 	// Props (Group)
 	/** Provide display classes. Set `flex` to stretch full width. */

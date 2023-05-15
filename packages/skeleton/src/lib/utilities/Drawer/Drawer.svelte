@@ -7,10 +7,10 @@
 	const dispatch = createEventDispatcher();
 
 	// Types
-	import type { CssClasses } from '@skeletonlabs/skeleton';
+	import type { CssClasses } from '../..';
 
 	// Actions
-	import { focusTrap } from '@skeletonlabs/skeleton';
+	import { focusTrap } from '../..';
 
 	// Drawer Utils
 	import type { DrawerSettings } from './types';

@@ -1,6 +1,6 @@
 // Data Table Types
 
-import type { PaginationSettings } from '@skeletonlabs/skeleton';
+import type { PaginationSettings } from '../..';
 
 export interface DataTableModel<T extends Record<PropertyKey, unknown>> {
 	/** The original source data. */

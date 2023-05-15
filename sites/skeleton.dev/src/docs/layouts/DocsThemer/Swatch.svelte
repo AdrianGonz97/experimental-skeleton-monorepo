@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { SemanticNames } from '@skeletonlabs/skeleton/types';
+	import type { SemanticNames } from '$lib/types';
 	import { swatchColorClasses } from './settings';
 
 	/** Pass the color key name. */

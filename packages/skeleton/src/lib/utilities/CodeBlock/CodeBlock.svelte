@@ -5,10 +5,10 @@
 	const dispatch = createEventDispatcher();
 
 	// Types
-	import type { CssClasses } from '@skeletonlabs/skeleton';
+	import type { CssClasses } from '../..';
 
 	import { storeHighlightJs } from './stores';
-	import { clipboard } from '@skeletonlabs/skeleton';
+	import { clipboard } from '../..';
 
 	// Props
 	/** Sets a language alias for Highlight.js syntax highlighting. */

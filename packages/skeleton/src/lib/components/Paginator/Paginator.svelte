@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 	// Types
-	import type { CssClasses, PaginationSettings } from '@skeletonlabs/skeleton';
+	import type { CssClasses, PaginationSettings } from '../..';
 
 	const dispatch = createEventDispatcher();
 

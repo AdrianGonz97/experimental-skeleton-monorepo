@@ -1,6 +1,5 @@
 import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/kit/vite';
-import path from 'path';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -12,11 +11,7 @@ const config = {
 		})
 	],
 	kit: {
-		adapter: adapter(),
-		// https://kit.svelte.dev/docs/configuration#alias
-		alias: {
-			'@skeletonlabs/skeleton': path.resolve('./src/lib')
-		}
+		adapter: adapter()
 	}
 };
 

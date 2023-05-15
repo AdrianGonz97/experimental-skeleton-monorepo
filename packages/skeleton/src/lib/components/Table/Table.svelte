@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 
-	import { tableA11y } from '@skeletonlabs/skeleton';
+	import { tableA11y } from '../..';
 
 	// Types
-	import type { CssClasses, TableSource } from '@skeletonlabs/skeleton';
+	import type { CssClasses, TableSource } from '../..';
 
 	const dispatch = createEventDispatcher();
 

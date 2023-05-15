@@ -18,7 +18,7 @@
 	const dispatch = createEventDispatcher();
 
 	// Types
-	import type { CssClasses } from '@skeletonlabs/skeleton';
+	import type { CssClasses } from '../..';
 
 	// Props (state)
 	/** Set open by default on load. */

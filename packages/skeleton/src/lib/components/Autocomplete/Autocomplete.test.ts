@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
 import type { AutocompleteOption } from './types';
-import { Autocomplete } from '@skeletonlabs/skeleton';
+import Autocomplete from './Autocomplete.svelte';
 import { render } from '@testing-library/svelte';
 
 // keeping this as an array of `as const`s gives us autocompletion, and type safety
