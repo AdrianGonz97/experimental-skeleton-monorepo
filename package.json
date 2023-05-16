@@ -9,7 +9,10 @@
 		"getall": "node scripts/checkout.cjs && pnpm i",
 		"postinstall": "pnpm -r sync",
 		"csa": "node ./packages/create-skeleton-app/src/index.js --types=typescript --prettier --eslint --playwright=false --vitest=false --codeblocks=true --popups=true --typography=false --forms=false -t=skeleton --skeletontemplate=welcome -p=sites --monorepo",
-		"ci:publish": "pnpm publish -r"
+		"ci:publish": "pnpm publish -r",
+		"ci:dev": "changeset version --no-git-tag --snapshot dev",
+		"ci:trunk": "changeset publish",
+		"cs": "changeset"
 	},
 	"license": "MIT",
 	"homepage": "https://skeleton.dev/",

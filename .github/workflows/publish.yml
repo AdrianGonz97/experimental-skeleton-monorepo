@@ -2,12 +2,12 @@ name: Publish Skeleton
 on:
   push:
     branches:
-      - trunk
+      - master
     paths:
       - ".changeset/**"
   pull_request:
     branches:
-      - trunk
+      - master
     paths:
       - ".changeset/**"
 concurrency: ${{ github.workflow }}-${{ github.ref }}
