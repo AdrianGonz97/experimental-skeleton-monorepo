@@ -6,7 +6,7 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"preinstall": "npx only-allow pnpm",
-		"getall": "node scripts/checkout.cjs",
+		"getall": "node scripts/checkout.cjs && pnpm i",
 		"postinstall": "pnpm -r sync",
 		"csa": "node ./packages/create-skeleton-app/src/index.js --types=typescript --prettier --eslint --playwright=false --vitest=false --codeblocks=true --popups=true --typography=false --forms=false -t=skeleton --skeletontemplate=welcome -p=sites --monorepo"
 	},
@@ -34,12 +34,13 @@
 		"sveltekit"
 	],
 	"devDependencies": {
+		"@changesets/cli": "^2.26.1",
 		"cspell": "^6.31.1",
 		"shelljs": "^0.8.5"
 	},
-	"packageManager": "pnpm@7.30.3",
+	"packageManager": "pnpm@8.5.0",
 	"engines": {
-		"pnpm": "^7.0.0"
+		"pnpm": ">=8"
 	},
 	"type": "module"
 }
