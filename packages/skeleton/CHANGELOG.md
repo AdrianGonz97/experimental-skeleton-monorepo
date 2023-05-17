@@ -1,5 +1,11 @@
 # @cokakoala/skeleton
 
+## 1.6.3
+
+### Patch Changes
+
+- 067b802: fix: added back in the pesky new line
+
 ## 1.6.2
 
 ### Patch Changes
