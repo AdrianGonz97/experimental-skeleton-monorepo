@@ -1,5 +1,12 @@
 # @cokakoala/skeleton
 
+## 2.0.2
+
+### Patch Changes
+
+- 412f318: let's see if this works
+- 412f318: fix: remove the pnpm cache and publish
+
 ## 2.0.1
 
 ### Patch Changes
