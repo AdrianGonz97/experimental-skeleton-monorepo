@@ -54,3 +54,13 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Merge master into dev on publish
+        if: steps.changesets.outputs.published == 'true'
+        run: |
+          git checkout master
+          git fetch origin
+          git pull
+          git checkout dev
+          git merge master
+          git push
