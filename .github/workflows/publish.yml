@@ -5,11 +5,6 @@ on:
       - master
     paths:
       - ".changeset/**"
-  pull_request:
-    branches:
-      - master
-    paths:
-      - ".changeset/**"
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 jobs:
   release:
