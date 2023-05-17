@@ -15,7 +15,7 @@ try {
 			const pkg = JSON.parse(fs.readFileSync(pkgJsonPath, "utf-8"));
 			const oldVersion = pkg.version;
 			const [major, minor, patch] = oldVersion.split(".").map(Number);
-			const newVersion = `${major}.${minor}.${patch + 1}-dev.${commitHash}`;
+			const newVersion = `${major}.${minor}.${patch}-dev.${commitHash}`;
 
 			pkg.version = newVersion;
 
