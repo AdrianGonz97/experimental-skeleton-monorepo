@@ -1,5 +1,11 @@
 # @cokakoala/skeleton
 
+## 2.0.7
+
+### Patch Changes
+
+- cd697c7: added an extra new line
+
 ## 2.0.6
 
 ### Patch Changes
