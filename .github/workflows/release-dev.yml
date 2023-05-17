@@ -1,47 +1,49 @@
-name: Publish Skeleton
+name: Skeleton Release - Dev
 on:
   push:
     branches:
       - dev
     paths:
       - ".changeset/**"
-  pull_request:
-    branches:
-      - dev
-    paths:
-      - ".changeset/**"
+      - "packages/skeleton/**"
+
 concurrency: ${{ github.workflow }}-${{ github.ref }}
+
 jobs:
   release:
+    name: Build & Publish a dev release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: pnpm/action-setup@v2
+
+      - name: Use PNPM v8
+        uses: pnpm/action-setup@v2
         with:
-          version: 7
-      - uses: actions/setup-node@v3
+          version: 8
+
+      - name: Use Node v18
+        uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: "pnpm"
+
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-      - name: Create release Pull Request or Publish to NPM
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          version: pnpm ci:dev
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: pnpm install
+
+      - name: Bump version to dev release
+        run: node scripts/dev-version.js
+
       - name: Packaging
+        run: pnpm ci:package
+
+      - name: Authenticate to NPM & Publish
         run: |
           cat << EOF > "$HOME/.npmrc"
             //registry.npmjs.org/:_authToken=$NPM_TOKEN
           EOF
-          pnpm package
-          cd package
-          npm publish --tag dev
+          pnpm publish packages/skeleton --access public --tag dev --no-git-checks
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -5,38 +5,43 @@ on:
       - master
     paths:
       - ".changeset/**"
-  pull_request:
-    branches:
-      - master
-    paths:
-      - ".changeset/**"
+
 concurrency: ${{ github.workflow }}-${{ github.ref }}
+
 jobs:
   release:
+    name: Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: pnpm/action-setup@v2
+
+      - name: Use PNPM v8
+        uses: pnpm/action-setup@v2
         with:
-          version: 7
-      - uses: actions/setup-node@v3
+          version: 8
+
+      - name: Use Node v18
+        uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: "pnpm"
+
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
+
       - name: Packaging
-        run: |
-          pnpm package
-      - name: Create release Pull Request or Publish to NPM
+        run: pnpm ci:package
+
+      - name: Create Release
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: pnpm ci:trunk
-          commit: "ci(changesets): version packages"
+          title: "chore(release): version packages"
+          commit: "chore(release): version packages"
+          publish: pnpm ci:publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
