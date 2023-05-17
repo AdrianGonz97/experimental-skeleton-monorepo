@@ -12,6 +12,7 @@
 		"ci:publish": "pnpm publish -r",
 		"ci:dev": "changeset version --no-git-tag --snapshot dev",
 		"ci:trunk": "changeset publish",
+		"ci:package": "pnpm -r package",
 		"cs": "changeset"
 	},
 	"license": "MIT",
