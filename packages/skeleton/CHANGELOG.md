@@ -1,5 +1,12 @@
 # @cokakoala/skeleton
 
+## 1.6.1
+
+### Patch Changes
+
+- 99e1fd6: chore: gh action
+  fix: bring back the new line
+
 ## 1.6.0
 
 ### Minor Changes
