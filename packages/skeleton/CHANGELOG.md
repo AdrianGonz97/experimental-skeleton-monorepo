@@ -1,5 +1,11 @@
 # @cokakoala/skeleton
 
+## 2.0.5
+
+### Patch Changes
+
+- 522e1c3: small change to the gitignores
+
 ## 2.0.4
 
 ### Patch Changes
