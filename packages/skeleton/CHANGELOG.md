@@ -1,5 +1,11 @@
 # @cokakoala/skeleton
 
+## 2.0.1
+
+### Patch Changes
+
+- 9c0acc6: let's see if this works
+
 ## 2.0.0
 
 ### Major Changes
