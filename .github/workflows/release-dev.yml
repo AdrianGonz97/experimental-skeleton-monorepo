@@ -1,4 +1,4 @@
-name: Skeleton Release - Dev
+name: Skeleton Dev Release
 on:
   push:
     branches:
