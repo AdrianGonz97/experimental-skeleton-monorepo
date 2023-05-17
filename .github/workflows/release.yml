@@ -5,7 +5,9 @@ on:
       - master
     paths:
       - ".changeset/**"
+
 concurrency: ${{ github.workflow }}-${{ github.ref }}
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -25,7 +27,7 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Packaging
         run: |
-          pnpm package
+          pnpm -r package
       - name: Create release Pull Request or Publish to NPM
         id: changesets
         uses: changesets/action@v1
