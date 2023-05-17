@@ -1,7 +1,6 @@
 {
 	"name": "skeleton.dev",
 	"version": "1.0.0",
-	"private": true,
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
