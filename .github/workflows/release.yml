@@ -47,9 +47,7 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: |
-            pnpm ci:package
-            pnpm ci:publish
+          publish: pnpm ci:package && pnpm ci:publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
