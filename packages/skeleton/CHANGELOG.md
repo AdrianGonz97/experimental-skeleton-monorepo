@@ -1,5 +1,11 @@
 # @cokakoala/skeleton
 
+## 1.6.4
+
+### Patch Changes
+
+- 039f772: sync dev and master on publish
+
 ## 1.6.3
 
 ### Patch Changes
