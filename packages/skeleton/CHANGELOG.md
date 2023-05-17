@@ -1,5 +1,21 @@
 # @cokakoala/skeleton
 
+## 2.0.1
+
+### Patch Changes
+
+- 9c0acc6: let's see if this works
+
+## 2.0.0
+
+### Major Changes
+
+- 4c648fb: brought it back again
+
+### Patch Changes
+
+- 6aa3e18: remove the new line
+
 ## 1.6.4
 
 ### Patch Changes
