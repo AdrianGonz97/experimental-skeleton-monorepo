@@ -1,5 +1,11 @@
 # @cokakoala/skeleton
 
+## 2.0.8
+
+### Patch Changes
+
+- remove the new line ([#56](https://github.com/AdrianGonz97/experimental-skeleton-monorepo/pull/56))
+
 ## 2.0.7
 
 ### Patch Changes

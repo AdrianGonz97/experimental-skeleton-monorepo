@@ -1,5 +1,11 @@
 # @cokakoala/create-skeleton-app
 
+## 0.2.2
+
+### Patch Changes
+
+- removed txt ([#55](https://github.com/AdrianGonz97/experimental-skeleton-monorepo/pull/55))
+
 ## 0.2.1
 
 ### Patch Changes
