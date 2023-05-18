@@ -1,11 +1,13 @@
 {
 	"$schema": "https://unpkg.com/@changesets/config@2.3.0/schema.json",
-	"changelog": "@changesets/cli/changelog",
+	"changelog": [
+		"@changesets/changelog-github",
+		{ "repo": "AdrianGonz97/experimental-skeleton-monorepo" }
+	],
 	"commit": false,
 	"fixed": [],
 	"linked": [],
 	"access": "public",
 	"baseBranch": "master",
-	"updateInternalDependencies": "patch",
-	"ignore": ["skeleton.dev"]
+	"updateInternalDependencies": "patch"
 }

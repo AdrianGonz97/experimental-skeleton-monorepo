@@ -1,16 +1,16 @@
-name: Publish Skeleton
+name: Publish Create-Skeleton-App
 on:
   push:
     branches:
       - master
-    paths-ignore:
+    paths:
       - "packages/create-skeleton-app/**"
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   release:
-    name: Release
+    name: Release CSA
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -48,7 +48,7 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          version: npx changeset version --ignore @cokakoala/create-skeleton-app
+          version: npx changeset version --ignore @cokakoala/skeleton
           publish: pnpm ci:release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
