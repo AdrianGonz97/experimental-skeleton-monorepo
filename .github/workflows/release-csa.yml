@@ -48,7 +48,7 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          version: npx changeset version --ignore @cokakoala/skeleton
+          version: pnpm changeset version --ignore @cokakoala/skeleton
           publish: pnpm ci:release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
