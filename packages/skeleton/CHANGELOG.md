@@ -1,5 +1,13 @@
 # @cokakoala/skeleton
 
+## 2.0.9
+
+### Patch Changes
+
+- did something special ([#62](https://github.com/AdrianGonz97/experimental-skeleton-monorepo/pull/62))
+
+- fix: did something else ([#63](https://github.com/AdrianGonz97/experimental-skeleton-monorepo/pull/63))
+
 ## 2.0.8
 
 ### Patch Changes
