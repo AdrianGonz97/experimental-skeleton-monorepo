@@ -267,6 +267,30 @@ const modal: ModalSettings = {\n
 };`}
 			/>
 		</section>
+		<!-- Async Response -->
+		<section class="space-y-4">
+			<h2 class="h2">Async Response</h2>
+			<!-- prettier-ignore -->
+			<p>You may await a modal response by wrapping it in a <a class="anchor" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank" rel="noreferrer">Javascript Promise</a>, which resolves when the response is triggered.</p>
+			<CodeBlock
+				language="ts"
+				code={`
+new Promise<boolean>((resolve) => {
+	const modal: ModalSettings = {
+		type: 'confirm',
+		title: 'Please Confirm',
+		body: 'Are you sure you wish to proceed?',
+		response: (r: boolean) => {
+			resolve(r);
+		}
+	};
+	modalStore.trigger(modal);
+}).then((r: any) => {
+	console.log('resolved response:', r);
+});
+	`}
+			/>
+		</section>
 		<!-- Component Modals -->
 		<section class="space-y-4">
 			<div class="flex items-center space-x-2">
@@ -286,7 +310,7 @@ const modal: ModalSettings = {\n
 				<svelte:fragment slot="footer">
 					<div class="text-center">
 						<!-- prettier-ignore -->
-						<a class="btn variant-ghost" href="https://github.com/skeletonlabs/skeleton/tree/master/src/docs/modals/examples" target="_blank" rel="noreferrer">View Source Code</a>
+						<a class="btn variant-ghost" href="https://github.com/skeletonlabs/skeleton/tree/master/sites/skeleton.dev/src/lib/modals/examples" target="_blank" rel="noreferrer">View Source Code</a>
 					</div>
 				</svelte:fragment>
 				<svelte:fragment slot="source">
