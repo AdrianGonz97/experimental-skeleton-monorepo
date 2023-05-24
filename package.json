@@ -13,8 +13,8 @@
 		"ci:publish": "changeset publish",
 		"ci:package": "pnpm -r package",
 		"ci:release": "pnpm ci:package && pnpm ci:publish",
-		"ci:lint": "pnpm -F \"./sites/skeleton.dev\" lint",
-		"ci:check": "pnpm -F \"./sites/skeleton.dev\" check",
+		"ci:lint": "pnpm -F \"./packages/skeleton\" lint",
+		"ci:check": "pnpm -F \"./packages/skeleton\" check",
 		"cs": "changeset"
 	},
 	"license": "MIT",
