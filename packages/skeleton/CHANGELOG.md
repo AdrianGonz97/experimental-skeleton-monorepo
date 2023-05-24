@@ -1,5 +1,11 @@
 # @cokakoala/skeleton
 
+## 2.0.10
+
+### Patch Changes
+
+- fix: ignore files new lines ([#66](https://github.com/AdrianGonz97/experimental-skeleton-monorepo/pull/66))
+
 ## 2.0.9
 
 ### Patch Changes
