@@ -20,8 +20,6 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
       
       - name: Use PNPM v8
         uses: pnpm/action-setup@v2
