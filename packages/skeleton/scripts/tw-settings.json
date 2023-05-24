@@ -1,7 +1,5 @@
 {
-	"prettier.documentSelectors": [
-		"**/*.svelte"
-	],
+	"prettier.documentSelectors": ["**/*.svelte"],
 	"tailwindCSS.classAttributes": [
 		"class",
 		"accent",
@@ -25,6 +23,8 @@
 		"buttonPositive",
 		"buttonTextCancel",
 		"buttonTextConfirm",
+		"buttonTextFirst",
+		"buttonTextLast",
 		"buttonTextNext",
 		"buttonTextPrevious",
 		"buttonTextSubmit",

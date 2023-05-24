@@ -15,9 +15,17 @@
 	export let fallback = '';
 	/**
 	 * Image only. Provide an Svelte action reference, such as `filter`.
-	 * @type {function}
 	 */
-	export let action: any = () => {};
+	export let action = <T extends HTMLElement>(node: T, params: typeof actionParams) => {
+		return {
+			update: () => {
+				// no empty default
+			},
+			destroy: () => {
+				// default
+			}
+		};
+	};
 	/** Image only. Provide Svelte action params, such as Apollo. */
 	export let actionParams = '';
 

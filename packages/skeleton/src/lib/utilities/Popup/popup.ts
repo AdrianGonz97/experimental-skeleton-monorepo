@@ -10,7 +10,9 @@ export function popup(triggerNode: HTMLElement, args: PopupSettings) {
 	// Local State
 	const popupState = {
 		open: false,
-		autoUpdateCleanup: () => {}
+		autoUpdateCleanup: () => {
+			// default
+		}
 	};
 	const focusableAllowedList = ':is(a[href], button, input, textarea, select, details, [tabindex]):not([tabindex="-1"])';
 	let focusablePopupElements: HTMLElement[];
@@ -73,7 +75,7 @@ export function popup(triggerNode: HTMLElement, args: PopupSettings) {
 			// https://floating-ui.com/docs/arrow
 			if (elemArrow) {
 				const { x: arrowX, y: arrowY } = middlewareData.arrow;
-				// @ts-ignore
+				// @ts-expect-error asdsadasd sdasdasd sdasdas
 				const staticSide = {
 					top: 'bottom',
 					right: 'left',
@@ -165,9 +167,14 @@ export function popup(triggerNode: HTMLElement, args: PopupSettings) {
 		}
 		// On Tab or ArrowDown key
 		const triggerMenuFocused: boolean = popupState.open && document.activeElement === triggerNode;
-		if (triggerMenuFocused && (key === 'ArrowDown' || key === 'Tab')) {
+		if (
+			triggerMenuFocused &&
+			(key === 'ArrowDown' || key === 'Tab') &&
+			focusableAllowedList.length > 0 &&
+			focusablePopupElements.length > 0
+		) {
 			event.preventDefault();
-			if (focusableAllowedList.length > 0) focusablePopupElements[0].focus();
+			focusablePopupElements[0].focus();
 		}
 	};
 
