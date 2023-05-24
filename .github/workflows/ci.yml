@@ -50,7 +50,7 @@ jobs:
         run: pnpm install
 
       - name: Run prettier and eslint
-        run: pnpm run lint
+        run: pnpm ci:lint
       
       - name: Run svelte-check
-        run: pnpm run check
+        run: pnpm ci:check
