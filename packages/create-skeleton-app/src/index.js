@@ -1,11 +1,10 @@
 #!/usr/bin/env node
 import { SkeletonOptions, createSkeleton } from './creator.js';
-export { SkeletonOptions, createSkeleton }
 import fs from 'fs-extra';
 import mri from 'mri';
 import { bold, cyan, gray, grey, red } from 'kleur/colors';
-import { intro, outro, text, select, multiselect, spinner, confirm, cancel, isCancel } from '@clack/prompts';
-import events from 'events'
+import { intro, text, select, multiselect, spinner } from '@clack/prompts';
+import events from 'events';
 import { dist, getHelpText, goodbye } from './utils.js';
 import path from 'path';
 import semver from 'semver';
@@ -14,16 +13,17 @@ const requiredVersion = '16.14.0';
 
 async function main() {
 	if (semver.lt(process.version, requiredVersion)) {
-		console.error(`You need to be running Node ${requiredVersion} to use Svelte Kit`)
-		process.exit(1)
+		console.error(`You need to be running Node ${requiredVersion} to use Svelte Kit`);
+		process.exit(1);
 	}
 
 	// This is required to handle spawning processes
 	events.EventEmitter.defaultMaxListeners = 15;
 
+	const startPath = process.cwd();
 	// grab any passed arguments from the command line
-	const startPath = process.cwd()
 	let opts = await parseArgs();
+
 
 	if ('quiet' in opts) {
 		// in quiet mode we prefill the defaults, then overlay the passed options and bypass all of askForMissingParams so that it
@@ -36,12 +36,12 @@ async function main() {
 	}
 
 	// Now that we have all of the options, lets create it.
-	const s = spinner()
-	s.start("Installing")
+	const s = spinner();
+	s.start('Installing');
 	await createSkeleton(opts);
-	s.stop("Done installing")
+	s.stop('Done installing');
 	// And give the user some final information on what to do Next
-	if (!(opts?.quiet)) {
+	if (!opts?.quiet) {
 		const pm = opts.packagemanager;
 		let runString = `${pm} dev\n`;
 
@@ -52,7 +52,7 @@ async function main() {
 		if (startPath != opts.path) {
 			finalInstructions += bold(cyan(`cd ${path.relative(startPath, opts.path)}\n`));
 		}
-		finalInstructions += bold(cyan(runString))
+		finalInstructions += bold(cyan(runString));
 		finalInstructions += grey(`Need some help or found an issue? Visit us on Discord https://discord.gg/EXqV7W8MtY`);
 		console.log(finalInstructions);
 	}
@@ -79,15 +79,17 @@ async function parseArgs() {
 			'quiet',
 			'monorepo',
 			'skeletonui',
+			'library',
 			'prettier',
 			'eslint',
 			'playwright',
 			'vitest',
+			'inspector',
 			'codeblocks',
 			'popups',
 			'forms',
 			'typography',
-			'verbose'
+			'verbose',
 		],
 	});
 
@@ -104,8 +106,40 @@ async function parseArgs() {
 	}
 	return opts;
 }
+
+function checkIfDirSafeToInstall(path) {
+	// Check if the directory already exists.
+	if (!fs.existsSync(path)) return;
+
+	//lets see whats in there
+	const conflicts = fs
+		.readdirSync(path)
+		.filter(
+			(file) => /^(package.json|svelte.config.js|tailwind.config.cjs|pnpm-lock.yaml|postcss.config.cjs|vite.config.ts)$/.test(file),
+		);
+
+	if (conflicts.length > 0) {
+		console.log("create-skeleton-app doesn't support updating an existing project, it needs a new empty directory to install into");
+		console.log(`The directory ${path} contains files that could conflict:`);
+		console.log();
+		for (const file of conflicts) {
+			try {
+				const stats = fs.lstatSync(path + '/' + file);
+				if (stats.isDirectory()) {
+					console.log(`  ${red(file)}/`);
+				} else {
+					console.log(`  ${red(file)}`);
+				}
+			} catch {
+				console.log(`  ${red(file)}`);
+			}
+		}
+		console.log('Either try using a new directory name, or remove the files listed above.');
+		process.exit(1);
+	}
+}
 /**
- * @param {SkeletonOptions} opts 
+ * @param {SkeletonOptions} opts
  */
 export async function askForMissingParams(opts) {
 	const { version } = JSON.parse(fs.readFileSync(dist('../package.json'), 'utf-8'));
@@ -114,92 +148,89 @@ export async function askForMissingParams(opts) {
 	
 ${bold(cyan('Welcome to Skeleton 💀! A UI toolkit for Svelte + Tailwind'))}
 
-Problems? Open an issue on ${cyan('https://github.com/skeletonlabs/skeleton/issues')} if none exists already.`)
+Problems? Open an issue on ${cyan('https://github.com/skeletonlabs/skeleton/issues')} if none exists already.`);
 
 	//NOTE: When doing checks here, make sure to test for the presence of the prop, not the prop value as it may be set to false deliberately.
 	if (!('name' in opts)) {
 		opts.name = await text({
-			message: "Name for your new project:?",
-			placeholder: "my-app",
+			message: 'Name for your new project:?',
+			placeholder: 'my-app',
 			validate(value) {
 				if (value.length === 0) return `App name is required!`;
 			},
 		});
-		goodbye(opts.name)
+		goodbye(opts.name);
 	}
+	// test the path to make sure it is safe to install
+	if (opts.path === undefined) opts.path = process.cwd();
+	opts.name = opts.name.replace(/\s+/g, '-').toLowerCase()
+	opts.path = path.resolve(opts.path, opts.name);
+	checkIfDirSafeToInstall(opts.path);
 
 	if (!('types' in opts)) {
 		opts.types = await select({
 			message: 'Add type checking with TypeScript?',
 			options: [
-				{
-					label: 'Yes, using TypeScript syntax',
-					value: 'typescript',
-				},
-				{
-					label: 'Yes, using JavaScript with JSDoc comments',
-					value: 'checkjs',
-				},
-				{ label: 'No', value: null },
-			]
+				{ value: 'typescript', label: 'Yes, using TypeScript syntax' },
+				{ value: 'checkjs', label: 'Yes, using JavaScript with JSDoc comments' },
+				{ value: null, label: 'No' },
+			],
+		});
+		goodbye(opts.type);
+	}
+
+	// Setup dev oriented packages and settings
+	if (
+		!['eslint', 'prettier', 'playwright', 'vitest', 'inspector'].every((value) => {
+			return Object.keys(opts).includes(value);
 		})
-		goodbye(opts.type)
-	}
-
-	if (!('eslint' in opts)) {
-		opts.eslint = await confirm({
-			message: 'Add ESLint for code linting?'
-		});
-		goodbye(opts.eslint)
-	}
-
-	if (!('prettier' in opts)) {
-		opts.prettier = await confirm({ message: 'Add Prettier for code formatting ?' });
-		goodbye(opts.prettier)
-	}
-
-	if (!('playwright' in opts)) {
-		opts.playwright = await confirm({ message: 'Add Playwright for browser testing ?' });
-		goodbye(opts.playwright)
-	}
-
-	if (!('vitest' in opts)) {
-		opts.vitest = await confirm({ message: 'Add Vitest for unit testing ?' });
-		goodbye(opts.vitest)
-	}
-
-	// Component Package Selection
-	if (!(['codeblocks', 'popups'].every(value => { return Object.keys(opts).includes(value) }))) {
-		const componentPackages = await multiselect({
-			message: "Install component dependencies:",
+	) {
+		const optionalInstalls = await multiselect({
+			message: 'What would you like setup in your project:',
+			// test opts for which values have been provided and prefill them
+			initialValues: ['eslint', 'prettier', 'playwright', 'vitest', 'inspector'].filter((value) => {
+				return Object.keys(opts).includes(value);
+			}),
 			options: [
-				{ value: "codeblocks", label: "CodeBlock (installs highlight.js)", },
-				{ value: "popups", label: "Popups (installs floating-ui)" },
+				{ value: 'eslint', label: 'Add ESLint for code linting?' },
+				{ value: 'prettier', label: 'Add Prettier for code formatting ?' },
+				{ value: 'playwright', label: 'Add Playwright for browser testing ?' },
+				{ value: 'vitest', label: 'Add Vitest for unit testing ?' },
+				{ value: 'inspector', label: 'Add Svelte Inspector for quick access to your source files from the browser ?' },
 			],
-			required: false
+			required: false,
 		});
-		goodbye(componentPackages)
-		componentPackages.every(value => opts[value] = true)
+		goodbye(optionalInstalls);
+		optionalInstalls.every((value) => (opts[value] = true));
 	}
 
-	// Tailwind Plugin Selection
-	if (!(['forms', 'typography'].every(value => { return Object.keys(opts).includes(value) }))) {
-		const twplugins = await multiselect({
-			message: "Pick tailwind plugins to add:",
+	// Additional packages to install
+	if (
+		!['forms', 'typography', 'codeblocks', 'popups'].every((value) => {
+			return Object.keys(opts).includes(value);
+		})
+	) {
+		const packages = await multiselect({
+			message: 'What other packages would you like to install:',
+			initialValues: ['forms', 'typography', 'codeblocks', 'popups'].filter((value) => {
+				return Object.keys(opts).includes(value);
+			}),
 			options: [
-				{ value: "forms", label: "forms" },
-				{ value: "typography", label: "typography" }
+				{ value: 'forms', label: 'Add Tailwind forms ?' },
+				{ value: 'typography', label: 'Add Tailwind typography ?' },
+				{ value: 'codeblocks', label: 'Add CodeBlock (installs highlight.js) ?' },
+				{ value: 'popups', label: 'Add Popups (installs floating-ui) ?' },
 			],
-			required: false
+			required: false,
 		});
-		goodbye(opts.twplugins)
-		twplugins.every(value => opts[value] = true)
+		goodbye(packages);
+		packages.every((value) => (opts[value] = true));
 	}
 
 	// Skeleton Theme Selection
 	if (!('skeletontheme' in opts)) {
 		opts.skeletontheme = await select({
-			message: "Select a theme:",
+			message: 'Select a theme:',
 			options: [
 				{ label: 'Skeleton', value: 'skeleton' },
 				{ label: 'Modern', value: 'modern' },
@@ -212,7 +243,7 @@ Problems? Open an issue on ${cyan('https://github.com/skeletonlabs/skeleton/issu
 				{ label: 'Crimson', value: 'crimson' },
 			],
 		});
-		goodbye(opts.skeletontheme)
+		goodbye(opts.skeletontheme);
 	}
 
 	//Skeleton Template Selection
@@ -235,9 +266,9 @@ Problems? Open an issue on ${cyan('https://github.com/skeletonlabs/skeleton/issu
 		parsedChoices.sort((a, b) => a.position - b.position);
 		opts.skeletontemplate = await select({
 			message: 'Which Skeleton app template?',
-			options: parsedChoices
+			options: parsedChoices,
 		});
-		goodbye(opts.skeletontemplate)
+		goodbye(opts.skeletontemplate);
 	}
 
 	const skelOpts = new SkeletonOptions();

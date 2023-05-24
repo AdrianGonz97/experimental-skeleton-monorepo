@@ -70,10 +70,15 @@
 		<CodeBlock
 			language="css"
 			code={`
+html, body { @apply h-full; }
 body {
 	background-image:
 		radial-gradient(at 0% 0%, rgba(var(--color-secondary-500) / 0.33) 0px, transparent 50%),
 		radial-gradient(at 98% 1%, rgba(var(--color-error-500) / 0.33) 0px, transparent 50%);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 		`}
 		/>
@@ -110,7 +115,7 @@ body {
 		/>
 		<!-- prettier-ignore -->
 		<p>
-			<a class="anchor" href="https://github.com/skeletonlabs/skeleton/tree/master/src/lib/themes" target="_blank" rel="noreferrer">View any existing theme</a> for a full list of available CSS custom properties. For heavy modifications to preset themes, consider copying the theme to your local project and use it like any other custom theme.
+			<a class="anchor" href="https://github.com/skeletonlabs/skeleton/tree/master/packages/skeleton/src/lib/themes" target="_blank" rel="noreferrer">View any existing theme</a> for a full list of available CSS custom properties. For heavy modifications to preset themes, consider copying the theme to your local project and use it like any other custom theme.
 		</p>
 	</section>
 
@@ -195,6 +200,26 @@ body {
     --theme-font-family-heading: '${f.name}', sans-serif;
     /* ... */
 }
+                        	`}
+						/>
+					{/each}
+					<!-- 5 -->
+					<h3 class="h3" data-toc-ignore>5. Preloading Fonts.</h3>
+					<p>
+						To avoid your page flickering during hydration, consider preloading fonts within the <code class="code">head</code>
+						tag in <code class="code">app.html</code>
+					</p>
+					{#each activeFonts as f}
+						<CodeBlock
+							language="html"
+							code={`
+<link
+	rel="preload"
+	href="%sveltekit.assets%/fonts/${f.file}"
+	as="font"
+	type="font/ttf"
+	crossorigin
+/>
                         	`}
 						/>
 					{/each}
