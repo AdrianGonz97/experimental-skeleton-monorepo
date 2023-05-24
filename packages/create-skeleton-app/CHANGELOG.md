@@ -1,5 +1,11 @@
 # @cokakoala/create-skeleton-app
 
+## 0.2.3
+
+### Patch Changes
+
+- fix: needs to be released RN ([#67](https://github.com/AdrianGonz97/experimental-skeleton-monorepo/pull/67))
+
 ## 0.2.2
 
 ### Patch Changes
