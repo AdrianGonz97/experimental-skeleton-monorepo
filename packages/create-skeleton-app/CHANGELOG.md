@@ -1,5 +1,11 @@
 # @cokakoala/create-skeleton-app
 
+## 0.2.4
+
+### Patch Changes
+
+- fix: ignore files new lines ([#66](https://github.com/AdrianGonz97/experimental-skeleton-monorepo/pull/66))
+
 ## 0.2.3
 
 ### Patch Changes
