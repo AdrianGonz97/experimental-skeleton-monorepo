@@ -24,7 +24,6 @@ async function main() {
 	// grab any passed arguments from the command line
 	let opts = await parseArgs();
 
-
 	if ('quiet' in opts) {
 		// in quiet mode we prefill the defaults, then overlay the passed options and bypass all of askForMissingParams so that it
 		// doesn't have to constantly check for quietmode all the time.
@@ -114,8 +113,8 @@ function checkIfDirSafeToInstall(path) {
 	//lets see whats in there
 	const conflicts = fs
 		.readdirSync(path)
-		.filter(
-			(file) => /^(package.json|svelte.config.js|tailwind.config.cjs|pnpm-lock.yaml|postcss.config.cjs|vite.config.ts)$/.test(file),
+		.filter((file) =>
+			/^(package.json|svelte.config.js|tailwind.config.cjs|pnpm-lock.yaml|postcss.config.cjs|vite.config.ts)$/.test(file),
 		);
 
 	if (conflicts.length > 0) {
@@ -163,7 +162,7 @@ Problems? Open an issue on ${cyan('https://github.com/skeletonlabs/skeleton/issu
 	}
 	// test the path to make sure it is safe to install
 	if (opts.path === undefined) opts.path = process.cwd();
-	opts.name = opts.name.replace(/\s+/g, '-').toLowerCase()
+	opts.name = opts.name.replace(/\s+/g, '-').toLowerCase();
 	opts.path = path.resolve(opts.path, opts.name);
 	checkIfDirSafeToInstall(opts.path);
 
@@ -275,4 +274,4 @@ Problems? Open an issue on ${cyan('https://github.com/skeletonlabs/skeleton/issu
 	Object.assign(skelOpts, opts);
 	return skelOpts;
 }
-await main();
+main();
