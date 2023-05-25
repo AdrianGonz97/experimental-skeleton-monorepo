@@ -101,7 +101,8 @@ export { default as Drawer } from './utilities/Drawer/Drawer.svelte';
 export { default as LightSwitch } from './utilities/LightSwitch/LightSwitch.svelte';
 export { default as Toast } from './utilities/Toast/Toast.svelte';
 // Filter Components
-export { default as Apollo } from './actions/Filters/svg-filters/Apollo.svelte';
+export { default as Apollo 
+} from './actions/Filters/svg-filters/Apollo.svelte';
 export { default as BlueNight } from './actions/Filters/svg-filters/BlueNight.svelte';
 export { default as Emerald } from './actions/Filters/svg-filters/Emerald.svelte';
 export { default as GreenFall } from './actions/Filters/svg-filters/GreenFall.svelte';
