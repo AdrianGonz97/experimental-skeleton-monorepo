@@ -12,7 +12,6 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 jobs:
   dev-release:
     name: Build & Publish dev Release
-    needs: lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo

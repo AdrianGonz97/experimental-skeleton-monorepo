@@ -10,7 +10,6 @@ jobs:
   release:
     name: Build & Publish latest Release
     if: github.repository == 'AdrianGonz97/experimental-skeleton-monorepo'
-    needs: lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
