@@ -13,8 +13,8 @@
 		"ci:publish": "changeset publish",
 		"ci:package": "pnpm -r package",
 		"ci:release": "pnpm ci:package && pnpm ci:publish",
-		"ci:lint": "pnpm -r lint",
-		"ci:check": "pnpm -r check",
+		"ci:lint": "pnpm --parallel lint",
+		"ci:check": "pnpm --parallel check",
 		"cs": "changeset"
 	},
 	"license": "MIT",
