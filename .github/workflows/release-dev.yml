@@ -10,30 +10,8 @@ on:
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: pnpm
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Run prettier and eslint
-        run: pnpm ci:lint
-      
-      - name: Run svelte-check
-        run: pnpm ci:check
-        
   dev-release:
     name: Build & Publish dev Release
-    needs: lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
