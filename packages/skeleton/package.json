@@ -1,5 +1,5 @@
 {
-	"name": "@skeletonlabs/skeleton",
+	"name": "@cokakoala/skeleton",
 	"version": "1.6.1",
 	"description": "A SvelteKit component library.",
 	"author": "endigo9740 <chris@skeletonlabs.dev>",

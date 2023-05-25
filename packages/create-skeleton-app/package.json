@@ -1,5 +1,5 @@
 {
-	"name": "create-skeleton-app",
+	"name": "@cokakoala/create-skeleton-app",
 	"version": "0.0.44",
 	"description": "Use this CLI app to setup a new Skeleton application in a new SvelteKit project.",
 	"keywords": [
