@@ -9,6 +9,7 @@
 		"getall": "node scripts/checkout.cjs && pnpm i",
 		"postinstall": "pnpm -r sync",
 		"csa": "node ./packages/create-skeleton-app/src/index.js --types=typescript --prettier --eslint --playwright=false --vitest=false --codeblocks=true --popups=true --typography=false --forms=false -t=skeleton --skeletontemplate=welcome -p=sites --monorepo",
+		"format": "pnpm --parallel format",
 		"ci:dev": "changeset version --no-git-tag --snapshot dev",
 		"ci:publish": "changeset publish",
 		"ci:package": "pnpm -r package",
