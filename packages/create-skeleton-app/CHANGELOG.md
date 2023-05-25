@@ -1,5 +1,13 @@
 # create-skeleton-app
 
+## 1.0.0
+
+### Major Changes
+
+- Miscreant version submit
+
+  Let see if this accidentally triggers anything on PR submit
+
 ## 0.0.47
 
 ### Patch Changes
