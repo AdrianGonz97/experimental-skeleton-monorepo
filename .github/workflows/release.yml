@@ -86,6 +86,9 @@ jobs:
       - name: Deploy master to Vercel
         if: steps.changesets.outputs.published == 'true'
         run: |
+          git add .
+          git commit -m "updated tw-settings.json"
+          git push
           git checkout dev
           git merge master
           git push
