@@ -29,7 +29,7 @@ jobs:
         run: pnpm ci:check
         
   release:
-    name: Release
+    name: Build & Publish latest Release
     needs: lint
     runs-on: ubuntu-latest
     steps:
