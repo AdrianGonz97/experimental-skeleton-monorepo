@@ -27,7 +27,7 @@ export const menuNavLinks: Record<string, Array<{ title: string; list: List }>> 
 				{ href: '/docs/quickstart', label: 'Quickstart', keywords: 'start, setup, tutorial, guide' },
 				{ href: '/docs/contributing', label: 'Contributing', keywords: 'branch, pr' }
 			]
-		},
+		}
 	],
 	'/elements': [
 		{
