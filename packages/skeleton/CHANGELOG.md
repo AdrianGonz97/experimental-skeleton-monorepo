@@ -1,5 +1,11 @@
 # @skeletonlabs/skeleton
 
+## 2.1.1
+
+### Patch Changes
+
+- fix: wow version number annoying ([#104](https://github.com/AdrianGonz97/experimental-skeleton-monorepo/pull/104))
+
 ## 1.6.3
 
 ### Patch Changes
