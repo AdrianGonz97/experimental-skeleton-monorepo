@@ -1,5 +1,7 @@
 {
-	"prettier.documentSelectors": ["**/*.svelte"],
+	"prettier.documentSelectors": [
+		"**/*.svelte"
+	],
 	"tailwindCSS.classAttributes": [
 		"class",
 		"accent",
@@ -28,6 +30,8 @@
 		"buttonTextNext",
 		"buttonTextPrevious",
 		"buttonTextSubmit",
+		"caretClosed",
+		"caretOpen",
 		"chips",
 		"color",
 		"cursor",
