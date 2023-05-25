@@ -1,5 +1,15 @@
 # @skeletonlabs/skeleton
 
+## 2.2.0
+
+### Minor Changes
+
+- feat: some new feature added ([#107](https://github.com/AdrianGonz97/experimental-skeleton-monorepo/pull/107))
+
+### Patch Changes
+
+- fix: added new line to gitignore ([#108](https://github.com/AdrianGonz97/experimental-skeleton-monorepo/pull/108))
+
 ## 2.1.1
 
 ### Patch Changes
