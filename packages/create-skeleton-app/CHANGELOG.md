@@ -1,5 +1,11 @@
 # create-skeleton-app
 
+## 0.0.47
+
+### Patch Changes
+
+- antoher one ([#94](https://github.com/AdrianGonz97/experimental-skeleton-monorepo/pull/94))
+
 ## 0.0.46
 
 ### Patch Changes
