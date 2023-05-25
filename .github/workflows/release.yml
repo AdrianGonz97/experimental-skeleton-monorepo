@@ -79,14 +79,7 @@ jobs:
       - name: Merge master into dev on publish
         if: steps.changesets.outputs.published == 'true'
         run: |
-          git checkout dev
-          git merge master
-          git push
-      
-      - name: Deploy master to Vercel
-        if: steps.changesets.outputs.published == 'true'
-        run: |
-          git add .
+          git add ./packages/skeleton/scripts/tw-settings.json
           git commit -m "updated tw-settings.json"
           git push
           git checkout dev
