@@ -1,5 +1,11 @@
 # @skeletonlabs/skeleton
 
+## 1.6.2
+
+### Patch Changes
+
+- testting this ([#96](https://github.com/AdrianGonz97/experimental-skeleton-monorepo/pull/96))
+
 ## 2.0.1
 
 ### Patch Changes
