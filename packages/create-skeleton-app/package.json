@@ -33,7 +33,7 @@
 		"pub:next": "npm publish --tag next",
 		"pub:release": "npm publish",
 		"release": "npm publish",
-		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"lint": "prettier --ignore-path .prettierignore --check --plugin-search-dir=. . && eslint --fix --ignore-path .gitignore .",
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"dependencies": {
@@ -47,6 +47,7 @@
 	},
 	"devDependencies": {
 		"eslint": "^8.41.0",
+		"eslint-config-prettier": "^8.8.0",
 		"prettier": "^2.8.8",
 		"svelte": "^3.59.1"
 	}
