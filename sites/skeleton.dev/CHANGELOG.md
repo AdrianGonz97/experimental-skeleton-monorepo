@@ -1,5 +1,11 @@
 # skeleton.dev
 
+## 1.0.3
+
+### Patch Changes
+
+- docs: small change ([#113](https://github.com/AdrianGonz97/experimental-skeleton-monorepo/pull/113))
+
 ## 1.0.2
 
 ### Patch Changes
