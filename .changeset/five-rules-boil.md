@@ -1,5 +1,5 @@
 ---
-"@cokakoala/skeleton": minor
+"@cokakoala/skeleton": patch
 ---
 
-test: some change here
+test: some change here - but actually not
