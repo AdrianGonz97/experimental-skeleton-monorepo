@@ -1,5 +1,11 @@
 # create-skeleton-app
 
+## 0.0.49
+
+### Patch Changes
+
+- fix: another commit to see an update ([#115](https://github.com/AdrianGonz97/experimental-skeleton-monorepo/pull/115))
+
 ## 0.0.48
 
 ### Patch Changes

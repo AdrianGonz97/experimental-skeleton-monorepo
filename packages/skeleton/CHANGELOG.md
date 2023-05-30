@@ -1,5 +1,13 @@
 # @skeletonlabs/skeleton
 
+## 2.2.2
+
+### Patch Changes
+
+- fix: some fix directly to master ([#115](https://github.com/AdrianGonz97/experimental-skeleton-monorepo/pull/115))
+
+- docs: small change again ([#113](https://github.com/AdrianGonz97/experimental-skeleton-monorepo/pull/113))
+
 ## 2.2.1
 
 ### Patch Changes
