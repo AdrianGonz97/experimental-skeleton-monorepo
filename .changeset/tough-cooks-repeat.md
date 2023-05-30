@@ -3,4 +3,4 @@
 "@cokakoala/skeleton": patch
 ---
 
-docs: small change
+docs: small change again
