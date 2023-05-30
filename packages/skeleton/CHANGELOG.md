@@ -1,5 +1,11 @@
 # @skeletonlabs/skeleton
 
+## 2.2.3
+
+### Patch Changes
+
+- test: some change here - but actually not ([#117](https://github.com/AdrianGonz97/experimental-skeleton-monorepo/pull/117))
+
 ## 2.2.2
 
 ### Patch Changes
